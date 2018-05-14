@@ -1,0 +1,2609 @@
+  /* ===================================================================
+   *
+   *  Infinity v1.0 Main Stylesheet
+   *  01-02-2017
+   *  ------------------------------------------------------------------
+   *
+   *  TOC:
+   *  01. webfonts and iconfonts
+   *  02. base style overrides
+   *  03. typography & general theme styles
+   *  04. preloader
+   *  05. forms
+   *  06. buttons
+   *  07. other components
+   *  08. common and reusable styles
+   *  09. header styles
+   *  10. home
+   *  11. about
+   *  12. services
+   *  13. portfolio
+   *  14. testimonials
+   *  15. clients
+   *  16. contact
+   *  17. footer
+   *
+   * ===================================================================
+
+  /* ===================================================================
+   *  01. webfonts and iconfonts - (_document-setup)
+   *
+   * -------------------------------------------------------------------
+
+// @import url("micons/micons.css")
+
+.infinity-pug
+
+  /* ===================================================================
+   *  02. base style overrides - (_document-setup)
+   *
+   * -------------------------------------------------------------------
+
+  html
+    font-size: 10px
+    height: 100%
+
+  @media only screen and (max-width: 1024px)
+    html
+      font-size: 9.375px
+
+  @media only screen and (max-width: 768px)
+    html
+      font-size: 10px
+
+  @media only screen and (max-width: 400px)
+    html
+      font-size: 9.375px
+
+  body
+    height: 100%
+    background: #111111
+    font-family: "librebaskerville-regular", serif
+    font-size: 1.6rem
+    line-height: 3rem
+    color: #353535
+    margin: 0
+    padding: 0
+
+  /* -------------------------------------------------------------------
+   * links - (_document-setup)
+   * -------------------------------------------------------------------
+
+  a
+    color: #07617d
+    -moz-transition: all 0.3s ease-in-out
+    -o-transition: all 0.3s ease-in-out
+    -webkit-transition: all 0.3s ease-in-out
+    -ms-transition: all 0.3s ease-in-out
+    transition: all 0.3s ease-in-out
+    &:visited
+      color: #07617d
+      -moz-transition: all 0.3s ease-in-out
+      -o-transition: all 0.3s ease-in-out
+      -webkit-transition: all 0.3s ease-in-out
+      -ms-transition: all 0.3s ease-in-out
+      transition: all 0.3s ease-in-out
+    &:hover, &:focus
+      color: #000000
+
+  /* ===================================================================
+   *  03. typography & general theme styles - (_document-setup.scss)
+   *
+   * -------------------------------------------------------------------
+
+  h1, h2, h3, h4, h5, h6, .h01, .h02, .h03, .h04, .h05, .h06
+    font-family: "montserrat-bold", sans-serif
+    color: #151515
+    font-style: normal
+    text-rendering: optimizeLegibility
+    margin-bottom: 2.1rem
+
+  h3, .h03, h4, .h04
+    margin-bottom: 1.8rem
+
+  h5, .h05, h6, .h06
+    margin-bottom: 1.2rem
+
+  h1, .h01
+    font-size: 3.1rem
+    line-height: 1.35
+    letter-spacing: -.1rem
+
+  @media only screen and (max-width: 600px)
+    h1, .h01
+      font-size: 2.6rem
+      letter-spacing: -.07rem
+
+  h2, .h02
+    font-size: 2.4rem
+    line-height: 1.25
+
+  h3, .h03
+    font-size: 2rem
+    line-height: 1.5
+
+  h4, .h04
+    font-size: 1.7rem
+    line-height: 1.76
+
+  h5, .h05
+    font-size: 1.4rem
+    line-height: 1.7
+    text-transform: uppercase
+    letter-spacing: .2rem
+
+  h6, .h06
+    font-size: 1.3rem
+    line-height: 1.85
+    text-transform: uppercase
+    letter-spacing: .2rem
+
+  p
+    img
+      margin: 0
+    &.lead
+      font-family: "montserrat-regular", sans-serif
+      font-size: 2rem
+      line-height: 1.8
+      color: #4f4f4f
+      margin-bottom: 3.6rem
+
+  @media only screen and (max-width: 768px)
+    p.lead
+      font-size: 1.8rem
+
+  em, i, strong, b
+    font-size: 1.6rem
+    line-height: 3rem
+    font-style: normal
+    font-weight: normal
+
+  em, i
+    font-family: "librebaskerville-italic", serif
+
+  strong, b
+    font-family: "librebaskerville-bold", serif
+
+  small
+    font-size: 1.1rem
+    line-height: inherit
+
+  blockquote
+    margin: 3rem 0
+    padding-left: 5rem
+    position: relative
+    &:before
+      content: "\201C"
+      font-size: 10rem
+      line-height: 0px
+      margin: 0
+      color: rgba(0, 0, 0, 0.3)
+      font-family: arial, sans-serif
+      position: absolute
+      top: 3.6rem
+      left: 0
+    p
+      font-family: "librebaskerville-italic", georgia, serif
+      font-style: italic
+      padding: 0
+      font-size: 1.9rem
+      line-height: 1.895
+    cite
+      display: block
+      font-size: 1.3rem
+      font-style: normal
+      line-height: 1.615
+      &:before
+        content: "\2014 \0020"
+      a
+        color: #4f4f4f
+        border: none
+        &:visited
+          color: #4f4f4f
+          border: none
+
+  abbr
+    font-family: "librebaskerville-bold", serif
+    font-variant: small-caps
+    text-transform: lowercase
+    letter-spacing: .05rem
+    color: #4f4f4f
+
+  var, kbd, samp, code
+    font-family: Consolas, "Andale Mono", Courier, "Courier New", monospace
+
+  pre
+    font-family: Consolas, "Andale Mono", Courier, "Courier New", monospace
+    padding: 2.4rem 3rem 3rem
+    background: #F1F1F1
+
+  code
+    font-size: 1.4rem
+    margin: 0 .2rem
+    padding: .3rem .6rem
+    white-space: nowrap
+    background: #F1F1F1
+    border: 1px solid #E1E1E1
+    border-radius: 3px
+
+  pre
+    > code
+      display: block
+      white-space: pre
+      line-height: 2
+      padding: 0
+      margin: 0
+    &.prettyprint > code
+      border: none
+
+  del
+    text-decoration: line-through
+
+  abbr[title], dfn[title]
+    border-bottom: 1px dotted
+    cursor: help
+
+  mark
+    background: #FFF49B
+    color: #000
+
+  hr
+    border: solid #d2d2d2
+    border-width: 1px 0 0
+    clear: both
+    margin: 2.4rem 0 1.5rem
+    height: 0
+
+  /* -------------------------------------------------------------------
+   * Lists - (_document-setup.scss)
+   * -------------------------------------------------------------------
+
+  ol
+    list-style: decimal
+
+  ul
+    list-style: disc
+
+  li
+    display: list-item
+
+  ol
+    margin-left: 1.7rem
+
+  ul
+    margin-left: 1.7rem
+    li
+      padding-left: .4rem
+    ul, ol
+      margin: .6rem 0 .6rem 1.7rem
+
+  ol
+    ol, ul
+      margin: .6rem 0 .6rem 1.7rem
+
+  ul.disc li
+    display: list-item
+    list-style: none
+    padding: 0 0 0 .8rem
+    position: relative
+    &::before
+      content: ""
+      display: inline-block
+      width: 8px
+      height: 8px
+      border-radius: 50%
+      background: #07617d
+      position: absolute
+      left: -17px
+      top: 11px
+      vertical-align: middle
+
+  dt
+    margin: 0
+    color: #07617d
+
+  dd
+    margin: 0 0 0 2rem
+
+  /* -------------------------------------------------------------------
+   * Spacing - (_document-setup)
+   * -------------------------------------------------------------------
+
+  button, .button
+    margin-bottom: 1.2rem
+
+  fieldset
+    margin-bottom: 1.5rem
+
+  input, textarea, select, pre, blockquote, figure, table, p, ul, ol, dl, form, .fluid-video-wrapper, .ss-custom-select
+    margin-bottom: 3rem
+
+  /* -------------------------------------------------------------------
+   * floated image - (_document-setup)
+   * -------------------------------------------------------------------
+
+  img
+    &.pull-right
+      margin: 1.5rem 0 0 3rem
+    &.pull-left
+      margin: 1.5rem 3rem 0 0
+
+  /* -------------------------------------------------------------------
+   * block grids paddings
+   * -------------------------------------------------------------------
+
+  .bgrid
+    padding: 0 20px
+
+  @media only screen and (max-width: 1024px)
+    .bgrid
+      padding: 0 18px
+
+  @media only screen and (max-width: 768px)
+    .bgrid
+      padding: 0 15px
+
+  @media only screen and (max-width: 600px)
+    .bgrid
+      padding: 0 10px
+
+  @media only screen and (max-width: 400px)
+    .bgrid
+      padding: 0
+
+  /* -------------------------------------------------------------------
+   * tables - (_document-setup.scss)
+   * -------------------------------------------------------------------
+
+  table
+    border-width: 0
+    width: 100%
+    max-width: 100%
+    font-family: "librebaskerville-regular", sans-serif
+
+  th, td
+    padding: 1.5rem 3rem
+    text-align: left
+    border-bottom: 1px solid #E8E8E8
+
+  th
+    color: #151515
+    font-family: "montserrat-bold", sans-serif
+
+  td
+    line-height: 1.5
+
+  th:first-child, td:first-child
+    padding-left: 0
+
+  th:last-child, td:last-child
+    padding-right: 0
+
+  .table-responsive
+    overflow-x: auto
+    -webkit-overflow-scrolling: touch
+
+  /* -------------------------------------------------------------------
+   * pace.js styles - minimal  - (_document-setup.scss)
+   * -------------------------------------------------------------------
+
+  .pace
+    -webkit-pointer-events: none
+    pointer-events: none
+    -webkit-user-select: none
+    -moz-user-select: none
+    user-select: none
+
+  .pace-inactive
+    display: none
+
+  .pace .pace-progress
+    background: #f9a828
+    position: fixed
+    z-index: 900
+    top: 0
+    right: 100%
+    width: 100%
+    height: 6px
+
+  /* ===================================================================
+   *  04. Preloader
+   *
+   * -------------------------------------------------------------------
+
+  #preloader
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: #0F1215
+    z-index: 800
+    height: 100%
+    width: 100%
+
+  .no-js #preloader, .oldie #preloader
+    display: none
+
+  #loader
+    position: absolute
+    left: 50%
+    top: 50%
+    width: 60px
+    height: 60px
+    margin-left: -30px
+    margin-top: -30px
+    padding: 0
+    background-color: #f9a828
+    border-radius: 100%
+    -webkit-animation: sk-scaleout 1.0s infinite ease-in-out
+    animation: sk-scaleout 1.0s infinite ease-in-out
+
+  @-webkit-keyframes sk-scaleout
+    0%
+      -webkit-transform: scale(0)
+
+    100%
+      -webkit-transform: scale(1)
+      opacity: 0
+
+
+  @keyframes sk-scaleout
+    0%
+      -webkit-transform: scale(0)
+      transform: scale(0)
+
+    100%
+      -webkit-transform: scale(1)
+      transform: scale(1)
+      opacity: 0
+
+
+  /* ===================================================================
+   *  05. forms - (_forms.scss)
+   *
+   * -------------------------------------------------------------------
+
+  fieldset
+    border: none
+
+  input
+    &[type="email"], &[type="number"], &[type="search"], &[type="text"], &[type="tel"], &[type="url"], &[type="password"]
+      display: block
+      height: 6rem
+      padding: 1.5rem 2rem
+      border: 0
+      outline: none
+      vertical-align: middle
+      color: #444444
+      font-family: "montserrat-regular", sans-serif
+      font-size: 1.4rem
+      line-height: 3rem
+      max-width: 100%
+      background: rgba(0, 0, 0, 0.1)
+      -moz-transition: all 0.3s ease-in-out
+      -o-transition: all 0.3s ease-in-out
+      -webkit-transition: all 0.3s ease-in-out
+      -ms-transition: all 0.3s ease-in-out
+      transition: all 0.3s ease-in-out
+
+  textarea, select
+    display: block
+    height: 6rem
+    padding: 1.5rem 2rem
+    border: 0
+    outline: none
+    vertical-align: middle
+    color: #444444
+    font-family: "montserrat-regular", sans-serif
+    font-size: 1.4rem
+    line-height: 3rem
+    max-width: 100%
+    background: rgba(0, 0, 0, 0.1)
+    -moz-transition: all 0.3s ease-in-out
+    -o-transition: all 0.3s ease-in-out
+    -webkit-transition: all 0.3s ease-in-out
+    -ms-transition: all 0.3s ease-in-out
+    transition: all 0.3s ease-in-out
+
+  .ss-custom-select
+    position: relative
+    padding: 0
+    select
+      -webkit-appearance: none
+      -moz-appearance: none
+      -ms-appearance: none
+      -o-appearance: none
+      appearance: none
+      text-indent: 0.01px
+      text-overflow: ''
+      margin: 0
+      line-height: 3rem
+      vertical-align: middle
+      option
+        padding-left: 2rem
+        padding-right: 2rem
+      &::-ms-expand
+        display: none
+    &::after
+      content: '\f0d7'
+      font-family: 'FontAwesome'
+      position: absolute
+      top: 50%
+      right: 1.5rem
+      margin-top: -10px
+      bottom: auto
+      width: 20px
+      height: 20px
+      line-height: 20px
+      font-size: 18px
+      text-align: center
+      pointer-events: none
+      color: #252525
+
+  /* IE9 and below
+
+  .oldie .ss-custom-select::after
+    display: none
+
+  textarea
+    min-height: 25rem
+
+  input
+    &[type="email"]:focus, &[type="number"]:focus, &[type="search"]:focus, &[type="text"]:focus, &[type="tel"]:focus, &[type="url"]:focus, &[type="password"]:focus
+      color: #000000
+
+  textarea:focus, select:focus
+    color: #000000
+
+  label, legend
+    font-family: "montserrat-bold", sans-serif
+    font-size: 1.4rem
+    margin-bottom: .6rem
+    color: #020202
+    display: block
+
+  input
+    &[type="checkbox"], &[type="radio"]
+      display: inline
+
+  label >
+    .label-text
+      display: inline-block
+      margin-left: 1rem
+      font-family: "montserrat-regular", sans-serif
+      line-height: inherit
+    input
+      &[type="checkbox"], &[type="radio"]
+        margin: 0
+        position: relative
+        top: .15rem
+
+  /* -------------------------------------------------------------------
+   * Style Placeholder Text - (_forms.scss)
+   * -------------------------------------------------------------------
+
+  // \::-webkit-input-placeholder
+  //   color: #8e8e8e
+  //
+  // \:-moz-placeholder
+  //   color: #8e8e8e
+  //   /* Firefox 18-
+  //
+  // \::-moz-placeholder
+  //   color: #8e8e8e
+  //   /* Firefox 19+
+  //
+  // \:-ms-input-placeholder
+  //   color: #8e8e8e
+
+  .placeholder
+    color: #8e8e8e !important
+
+  /* -------------------------------------------------------------------
+   * Change Autocomplete styles in Chrome - (_forms.scss)
+   * -------------------------------------------------------------------
+
+  input:-webkit-autofill
+    border: none
+    -webkit-text-fill-color: #fabc5a
+    transition: background-color 5000s ease-in-out 0s
+    &:hover, &:focus input:-webkit-autofill
+      border: none
+      -webkit-text-fill-color: #fabc5a
+      transition: background-color 5000s ease-in-out 0s
+
+  textarea:-webkit-autofill
+    border: none
+    -webkit-text-fill-color: #fabc5a
+    transition: background-color 5000s ease-in-out 0s
+    &:hover textarea:-webkit-autofill:focus
+      border: none
+      -webkit-text-fill-color: #fabc5a
+      transition: background-color 5000s ease-in-out 0s
+
+  select:-webkit-autofill
+    border: none
+    -webkit-text-fill-color: #fabc5a
+    transition: background-color 5000s ease-in-out 0s
+    &:hover, &:focus
+      border: none
+      -webkit-text-fill-color: #fabc5a
+      transition: background-color 5000s ease-in-out 0s
+
+  /* ===================================================================
+   *  06. buttons - (_button-essentials.scss)
+   *
+   * -------------------------------------------------------------------
+
+  .button, a.button, button
+    display: inline-block
+    font-family: "montserrat-bold", sans-serif
+    font-size: 1.4rem
+    text-transform: uppercase
+    letter-spacing: .3rem
+    height: 5.4rem
+    line-height: 5.4rem
+    padding: 0 3rem
+    margin: 0 .3rem 1.2rem 0
+    background: #A5A5A5
+    color: #222222
+    text-decoration: none
+    cursor: pointer
+    text-align: center
+    white-space: nowrap
+    border: none
+    -moz-transition: all 0.3s ease-in-out
+    -o-transition: all 0.3s ease-in-out
+    -webkit-transition: all 0.3s ease-in-out
+    -ms-transition: all 0.3s ease-in-out
+    transition: all 0.3s ease-in-out
+
+  input
+    &[type="submit"], &[type="reset"], &[type="button"]
+      display: inline-block
+      font-family: "montserrat-bold", sans-serif
+      font-size: 1.4rem
+      text-transform: uppercase
+      letter-spacing: .3rem
+      height: 5.4rem
+      line-height: 5.4rem
+      padding: 0 3rem
+      margin: 0 .3rem 1.2rem 0
+      background: #A5A5A5
+      color: #222222
+      text-decoration: none
+      cursor: pointer
+      text-align: center
+      white-space: nowrap
+      border: none
+      -moz-transition: all 0.3s ease-in-out
+      -o-transition: all 0.3s ease-in-out
+      -webkit-transition: all 0.3s ease-in-out
+      -ms-transition: all 0.3s ease-in-out
+      transition: all 0.3s ease-in-out
+
+  .button:hover, a.button:hover, button:hover
+    background: #989898
+    color: #000000
+    outline: 0
+
+  input
+    &[type="submit"]:hover, &[type="reset"]:hover, &[type="button"]:hover
+      background: #989898
+      color: #000000
+      outline: 0
+
+  .button:focus, button:focus
+    background: #989898
+    color: #000000
+    outline: 0
+
+  input
+    &[type="submit"]:focus, &[type="reset"]:focus, &[type="button"]:focus
+      background: #989898
+      color: #000000
+      outline: 0
+
+  .button.button-primary, a.button.button-primary, button.button-primary
+    background: #151515
+    color: #FFFFFF
+
+  input
+    &[type="submit"].button-primary, &[type="reset"].button-primary, &[type="button"].button-primary
+      background: #151515
+      color: #FFFFFF
+
+  .button.button-primary:hover, a.button.button-primary:hover, button.button-primary:hover
+    background: #030303
+
+  input
+    &[type="submit"].button-primary:hover, &[type="reset"].button-primary:hover, &[type="button"].button-primary:hover
+      background: #030303
+
+  .button.button-primary:focus, button.button-primary:focus
+    background: #030303
+
+  input
+    &[type="submit"].button-primary:focus, &[type="reset"].button-primary:focus, &[type="button"].button-primary:focus
+      background: #030303
+
+  button.full-width, .button.full-width
+    width: 100%
+    margin-right: 0
+
+  button.medium, .button.medium
+    height: 5.7rem !important
+    line-height: 5.7rem !important
+    padding: 0 1.8rem !important
+
+  button.large, .button.large
+    height: 6rem !important
+    line-height: 6rem !important
+    padding: 0rem 3rem !important
+
+  button.stroke, .button.stroke
+    background: transparent !important
+    border: 3px solid #313131
+    line-height: 4.8rem
+
+  button.stroke.medium, .button.stroke.medium
+    line-height: 5.1rem !important
+
+  button.stroke.large, .button.stroke.large
+    line-height: 5.4rem !important
+
+  button.stroke:hover, .button.stroke:hover
+    border: 3px solid #f9a828
+    color: #f9a828
+
+  button::-moz-focus-inner, input::-moz-focus-inner
+    border: 0
+    padding: 0
+
+  /* ===================================================================
+   *  07. other components - (_others.scss)
+   *
+   * -------------------------------------------------------------------
+
+  /**
+   * alert box - (_alert-box.scss)
+   * -------------------------------------------------------------------
+
+  .alert-box
+    padding: 2.1rem 4rem 2.1rem 3rem
+    position: relative
+    margin-bottom: 3rem
+    border-radius: 3px
+    font-family: "montserrat-regular", sans-serif
+    font-size: 1.5rem
+    .close
+      position: absolute
+      right: 1.8rem
+      top: 1.8rem
+      cursor: pointer
+
+  .ss-error
+    background-color: #ffd1d2
+    color: #e65153
+
+  .ss-success
+    background-color: #c8e675
+    color: #758c36
+
+  .ss-info
+    background-color: #d7ecfb
+    color: #4a95cc
+
+  .ss-notice
+    background-color: #fff099
+    color: #bba31b
+
+  /* -------------------------------------------------------------------
+   * additional typo styles - (_additional-typo.scss)
+   * -------------------------------------------------------------------
+  /* drop cap
+   * -----------------------------------------------
+
+  .drop-cap:first-letter
+    float: left
+    margin: 0
+    padding: 1.5rem .6rem 0 0
+    font-size: 8.4rem
+    font-family: "montserrat-bold", sans-serif
+    line-height: 6rem
+    text-indent: 0
+    background: transparent
+    color: #151515
+
+  /* line definition style
+   * -----------------------------------------------
+
+  .lining
+    dt, dd
+      display: inline
+      margin: 0
+    dt + dt:before
+      content: "\A"
+      white-space: pre
+    dd
+      +
+        dt:before
+          content: "\A"
+          white-space: pre
+        dd:before
+          content: ", "
+          content: ", "
+      &:before
+        content: ": "
+        margin-left: -0.2em
+
+  /* dictionary definition style
+   * -----------------------------------------------
+
+  .dictionary-style
+    dt
+      display: inline
+      counter-reset: definitions
+      + dt:before
+        content: ", "
+        margin-left: -0.2em
+    dd
+      display: block
+      counter-increment: definitions
+      &:before
+        content: counter(definitions, decimal) ". "
+
+  /**
+   * Pull Quotes
+   * -----------
+   * markup:
+   *
+   * <aside class="pull-quote">
+   *		<blockquote>
+   *			<p></p>
+   *		</blockquote>
+   *	</aside>
+   *
+   * ---------------------------------------------------------------------
+
+  .pull-quote
+    position: relative
+    padding: 2.1rem 3rem 2.1rem 0px
+    &:before, &:after
+      height: 1em
+      position: absolute
+      font-size: 10rem
+      font-family: Arial, Sans-Serif
+      color: rgba(0, 0, 0, 0.3)
+    &:before
+      content: "\201C"
+      top: 33px
+      left: 0
+    &:after
+      content: '\201D'
+      bottom: -33px
+      right: 0
+    blockquote
+      margin: 0
+      &:before
+        content: none
+
+  /**
+   * Stats Tab
+   * ---------
+   * markup:
+   *
+   * <ul class="stats-tabs">
+   *		<li><a href="#">[value]<em>[name]</em></a></li>
+   *	</ul>
+   *
+   * Extend this object into your markup.
+   *
+   * ---------------------------------------------------------------------
+
+  .stats-tabs
+    padding: 0
+    margin: 3rem 0
+    li
+      display: inline-block
+      margin: 0 1.5rem 3rem 0
+      padding: 0 1.5rem 0 0
+      border-right: 1px solid #ccc
+      &:last-child
+        margin: 0
+        padding: 0
+        border: none
+      a
+        display: inline-block
+        font-size: 2.5rem
+        font-family: "montserrat-bold", sans-serif
+        border: none
+        color: #252525
+        &:hover
+          color: #07617d
+        em
+          display: block
+          margin: .6rem 0 0 0
+          font-size: 1.4rem
+          font-family: "montserrat-regular", sans-serif
+          color: #4f4f4f
+
+  /**
+   * skillbars - (_skillbars.scss)
+   * -------------------------------------------------------------------
+
+  .skill-bars
+    list-style: none
+    margin: 6rem 0 3rem
+    li
+      height: .6rem
+      background: #a1a1a1
+      width: 100%
+      margin-bottom: 6rem
+      padding: 0
+      position: relative
+      strong
+        position: absolute
+        left: 0
+        top: -3rem
+        font-family: "montserrat-bold", sans-serif
+        color: #313131
+        text-transform: uppercase
+        letter-spacing: .2rem
+        font-size: 1.5rem
+        line-height: 2.4rem
+      .progress
+        background: #313131
+        position: relative
+        height: 100%
+        span
+          position: absolute
+          right: 0
+          top: -3.6rem
+          display: block
+          font-family: "montserrat-regular", sans-serif
+          color: white
+          font-size: 1.1rem
+          line-height: 1
+          background: #313131
+          padding: .6rem .6rem
+          border-radius: 3px
+          &::after
+            position: absolute
+            left: 50%
+            bottom: -5px
+            margin-left: -5px
+            border-right: 5px solid transparent
+            border-left: 5px solid transparent
+            border-top: 5px solid #313131
+            content: ""
+      .percent5
+        width: 5%
+      .percent10
+        width: 10%
+      .percent15
+        width: 15%
+      .percent20
+        width: 20%
+      .percent25
+        width: 25%
+      .percent30
+        width: 30%
+      .percent35
+        width: 35%
+      .percent40
+        width: 40%
+      .percent45
+        width: 45%
+      .percent50
+        width: 50%
+      .percent55
+        width: 55%
+      .percent60
+        width: 60%
+      .percent65
+        width: 65%
+      .percent70
+        width: 70%
+      .percent75
+        width: 75%
+      .percent80
+        width: 80%
+      .percent85
+        width: 85%
+      .percent90
+        width: 90%
+      .percent95
+        width: 95%
+      .percent100
+        width: 100%
+
+  /* ===================================================================
+   *  08. common and reusable styles
+   *
+   * -------------------------------------------------------------------
+
+  .section-intro
+    text-align: center
+    position: relative
+    margin-bottom: 1.5rem
+    h1
+      font-family: "librebaskerville-bold", serif
+      font-size: 4.8rem
+      line-height: 1.375
+      color: #151515
+    h3
+      font-family: "montserrat-bold", sans-serif
+      font-size: 1.8 rem
+      line-height: 1.667
+      color: rgba(242, 242, 242, 0.5)
+      text-transform: uppercase
+      letter-spacing: .3rem
+      margin-bottom: 1.2rem
+    .lead
+      font-family: "montserrat-regular", sans-serif
+      font-size: 1.8
+      line-height: 1.833
+    &.with-bottom-sep
+      padding-bottom: 4.2rem
+      position: relative
+      &::after
+        display: inline-block
+        height: 1px
+        width: 200px
+        background-color: rgba(242, 242, 242, 0.1)
+        text-align: center
+
+  /* -------------------------------------------------------------------
+   * responsive:
+   * section-intro
+   * -------------------------------------------------------------------
+  @media only screen and (max-width: 1024px)
+    .section-intro
+      h1
+        font-size: 4.4rem
+      .lead
+        font-size: 1.7rem
+
+  @media only screen and (max-width: 768px)
+    .section-intro
+      h1
+        font-size: 4rem
+      h3
+        font-size: 1.7rem
+
+  @media only screen and (max-width: 600px)
+    .section-intro
+      h1
+        font-size: 3.4rem
+      h3
+        font-size: 1.7rem
+
+  @media only screen and (max-width: 500px)
+    .section-intro h3
+      font-size: 1.5rem
+
+  @media only screen and (max-width: 400px)
+    .section-intro h1
+      font-size: 3.1rem
+
+  .wide
+    max-width: 1300px
+
+  .narrow
+    max-width: 800px
+
+  .js
+    .animate-this, .animate-intro
+      opacity: 0
+
+  .oldie
+    .animate-this, .animate-intro .no-cssanimations .animate-this
+      opacity: 1
+
+  .no-cssanimations .animate-intro
+    opacity: 1
+
+  /* ===================================================================
+   *  09. header styles - (_layout.scss)
+   *
+   * -------------------------------------------------------------------
+
+  header
+    width: 100%
+    height: auto
+    position: absolute
+    left: 0
+    top: 0
+    z-index: 700
+    .row
+      height: auto
+      max-width: 1300px
+      position: relative
+    .header-logo
+      position: absolute
+      left: 32px
+      top: 42px
+      -moz-transition: all 1s ease-in-out
+      -o-transition: all 1s ease-in-out
+      -webkit-transition: all 1s ease-in-out
+      -ms-transition: all 1s ease-in-out
+      transition: all 1s ease-in-out
+      a
+        display: block
+        margin: 0
+        padding: 0
+        outline: 0
+        border: none
+        width: 57px
+        height: 27px
+        background: url("../images/logo.png") no-repeat center
+        background-size: 57px 27px
+        font: 0/0 a
+        text-shadow: none
+        color: transparent
+        -moz-transition: all 0.5s ease-in-out
+        -o-transition: all 0.5s ease-in-out
+        -webkit-transition: all 0.5s ease-in-out
+        -ms-transition: all 0.5s ease-in-out
+        transition: all 0.5s ease-in-out
+
+  /* -------------------------------------------------------------------
+   * header logo - (_layout.css)
+   * -------------------------------------------------------------------
+
+  /* -------------------------------------------------------------------
+   * menu trigger - (_layout.css)
+   * -------------------------------------------------------------------
+
+  #header-menu-trigger
+    display: block
+    position: fixed
+    right: 32px
+    top: 30px
+    height: 42px
+    width: 42px
+    line-height: 42px
+    font-family: "montserrat-regular", sans-serif
+    font-size: 1.4rem
+    text-transform: uppercase
+    letter-spacing: .2rem
+    color: rgba(255, 255, 255, 0.5)
+    -moz-transition: all 0.3s ease-in-out
+    -o-transition: all 0.3s ease-in-out
+    -webkit-transition: all 0.3s ease-in-out
+    -ms-transition: all 0.3s ease-in-out
+    transition: all 0.3s ease-in-out
+    &.opaque
+      background-color: #000000
+      .header-menu-text
+        background-color: #000000
+    &:hover, &:focus
+      color: #FFFFFF
+    .header-menu-text
+      display: block
+      position: absolute
+      top: 0
+      left: -75px
+      width: 75px
+      text-align: center
+      background-color: transparent
+      -moz-transition: all 0.3s ease-in-out
+      -o-transition: all 0.3s ease-in-out
+      -webkit-transition: all 0.3s ease-in-out
+      -ms-transition: all 0.3s ease-in-out
+      transition: all 0.3s ease-in-out
+    .header-menu-icon
+      display: block
+      height: 3px
+      width: 24px
+      background-color: #FFFFFF
+      position: absolute
+      top: 50%
+      right: 9px
+      margin-top: -1.5px
+      &::before, &::after
+        content: ''
+        width: 100%
+        height: 100%
+        background-color: inherit
+        position: absolute
+        left: 0
+      &::before
+        top: -9px
+      &::after
+        bottom: -9px
+
+  /* -------------------------------------------------------------------
+   * off-canvas menu - (_layout.scss)
+   * -------------------------------------------------------------------
+
+  #menu-nav-wrap
+    background: #0C0C0C
+    color: rgba(255, 255, 255, 0.25)
+    font-size: 1.5rem
+    line-height: 1.6
+    padding: 3.6rem 3rem
+    height: 100%
+    width: 240px
+    position: fixed
+    right: 0
+    top: 0
+    visibility: hidden
+    overflow-y: auto
+    z-index: 800
+    -webkit-transform: translateZ(0)
+    -webkit-backface-visibility: hidden
+    -webkit-transform: translateX(100%)
+    -ms-transform: translateX(100%)
+    transform: translateX(100%)
+    -moz-transition: all 0.4s ease-in-out
+    -o-transition: all 0.4s ease-in-out
+    -webkit-transition: all 0.4s ease-in-out
+    -ms-transition: all 0.4s ease-in-out
+    transition: all 0.4s ease-in-out
+    a
+      color: rgba(255, 255, 255, 0.5)
+      &:visited
+        color: rgba(255, 255, 255, 0.5)
+      &:hover, &:focus, &:active
+        color: white
+    h3
+      color: white
+      font-family: "montserrat-regular", sans-serif
+      font-size: 2rem
+      line-height: 1.5
+      margin-bottom: 1.5rem
+    .nav-list
+      font-family: "montserrat-regular", sans-serif
+      margin: 3.6rem 0 1.5rem 0
+      padding: 0 0 1.8rem 0
+      list-style: none
+      line-height: 3.6rem
+      li
+        padding-left: 0
+        border-bottom: 1px dotted rgba(255, 255, 255, 0.03)
+        line-height: 4.2rem
+        &:first-child
+          border-top: 1px dotted rgba(255, 255, 255, 0.03)
+        a
+          color: rgba(255, 255, 255, 0.25)
+          display: block
+          &:hover, &:focus
+            color: white
+    .header-social-list
+      list-style: none
+      display: inline-block
+      margin: 0
+      font-size: 2.1rem
+      li
+        margin-right: 12px
+        padding-left: 0
+        display: inline-block
+        a
+          color: rgba(255, 255, 255, 0.15)
+          &:hover, &:focus
+            color: white
+        &:last-child
+          margin: 0
+    .close-button
+      display: block
+      height: 30px
+      width: 30px
+      border-radius: 3px
+      background-color: rgba(0, 0, 0, 0.3)
+      position: absolute
+      top: 36px
+      right: 30px
+      font: 0/0 a
+      text-shadow: none
+      color: transparent
+      span
+        &::before, &::after
+          content: ""
+          display: block
+          height: 2px
+          width: 12px
+          background-color: #fff
+          position: absolute
+          top: 50%
+          left: 9px
+          margin-top: -1px
+        &::before
+          -webkit-transform: rotate(-45deg)
+          -ms-transform: rotate(-45deg)
+          transform: rotate(-45deg)
+        &::after
+          -webkit-transform: rotate(45deg)
+          -ms-transform: rotate(45deg)
+          transform: rotate(45deg)
+    .sponsor-text
+      font-family: "librebaskerville-regular", serif
+      font-size: 1.4rem
+      line-height: 3rem
+      span
+        color: rgba(255, 255, 255, 0.5)
+
+  /* menu is open
+
+  .menu-is-open #menu-nav-wrap
+    -webkit-transform: translateX(0)
+    -ms-transform: translateX(0)
+    transform: translateX(0)
+    visibility: visible
+    -webkit-overflow-scrolling: touch
+
+  /* -------------------------------------------------------------------
+   * responsive:
+   * header section
+   * -------------------------------------------------------------------
+  @media only screen and (max-width: 768px)
+    header .header-logo a
+      width: 51px
+      height: 24px
+      background-size: 51px 24px
+
+  @media only screen and (max-width: 400px)
+    #header-menu-trigger .header-menu-text
+      display: none
+
+  /* ===================================================================
+   *  10. home - (_layout.scss)
+   *
+   * -------------------------------------------------------------------
+
+  #home
+    width: 100%
+    height: 100%
+    background-color: #151515
+    background-image: url(../images/hero-bg.jpg)
+    background-repeat: no-repeat
+    background-position: center 30%
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    background-size: cover
+    background-attachment: fixed
+    min-height: 804px
+    position: relative
+    .overlay
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      opacity: .2
+      background-color: #19191b
+
+  .home-content-table
+    width: 100%
+    height: 100%
+    display: table
+    position: relative
+    text-align: center
+
+  .home-content-tablecell
+    display: table-cell
+    vertical-align: middle
+    z-index: 500
+    .row
+      position: relative
+      padding-top: 16.2rem
+      padding-bottom: 15rem
+    h3
+      font-family: "montserrat-bold", sans-serif
+      font-size: 2.2rem
+      color: white
+      text-transform: uppercase
+      letter-spacing: .3rem
+      margin: 0 0 .9rem 0
+    h1
+      font-family: "montserrat-bold", serif
+      font-size: 9rem
+      line-height: 1.133
+      color: #FFFFFF
+    .more
+      margin: 4.8rem 0 0 0
+      .button
+        border-color: #FFFFFF
+        color: #FFFFFF
+
+  /* home social-list
+
+  .home-social-list
+    position: absolute
+    left: 48px
+    bottom: 54px
+    margin: 0
+    padding: 0
+    list-style: none
+    font-size: 2.4rem
+    line-height: 1.75
+    text-align: center
+    &::before
+      display: block
+      content: ""
+      width: 2px
+      height: 42px
+      background-color: rgba(255, 255, 255, 0.3)
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: 12px
+    li
+      padding-left: 0
+      a
+        color: #FFFFFF
+        &:visited
+          color: #FFFFFF
+        &:hover, &:focus, &:active
+          color: #151515
+
+  /* scroll down
+
+  .scrolldown
+    position: absolute
+    bottom: 0
+    right: 0
+    -webkit-transform: rotate(90deg)
+    -ms-transform: rotate(90deg)
+    transform: rotate(90deg)
+    -webkit-transform-origin: right top 0
+    -ms-transform-origin: right top 0
+    transform-origin: right top 0
+    float: right
+    i
+      padding-left: 9px
+    a
+      &:hover, &:focus, &:active
+        color: #151515 !important
+
+  html[data-useragent*='MSIE 10.0'] .scrolldown, .oldie .scrolldown
+    display: none
+
+  .scroll-icon
+    display: inline-block
+    font-family: "montserrat-bold", sans-serif
+    font-size: 1.4rem
+    text-transform: uppercase
+    letter-spacing: .3rem
+    color: #FFFFFF !important
+    background: transparent
+    position: relative
+    top: 36px
+    right: 42px
+    -webkit-animation: animate-it 3s ease infinite
+    animation: animate-it 3s ease infinite
+
+  /* vertical animation
+  @-webkit-keyframes animate-it
+    0%, 60%, 80%, 100%
+      -webkit-transform: translateX(0)
+
+    20%
+      -webkit-transform: translateX(-5px)
+
+    40%
+      -webkit-transform: translateX(20px)
+
+
+  @keyframes animate-it
+    0%, 60%, 80%, 100%
+      -webkit-transform: translateX(0)
+
+    20%
+      -webkit-transform: translateX(-5px)
+
+    40%
+      -webkit-transform: translateX(20px)
+
+
+  /* -------------------------------------------------------------------
+   * responsive:
+   * home section
+   * -------------------------------------------------------------------
+  @media only screen and (max-width: 1200px)
+    .home-content-tablecell
+      h3
+        font-size: 2.1rem
+      h1
+        font-size: 7rem
+
+  @media only screen and (max-width: 1024px)
+    .home-content-tablecell
+      h3
+        font-size: 2rem
+      h1
+        font-size: 6rem
+
+  @media only screen and (max-width: 768px)
+    .home-content-tablecell
+      .row
+        max-width: 600px
+      h3
+        font-size: 1.8rem
+      h1
+        font-size: 5.2rem
+        br
+          display: none
+    .home-social-list
+      left: 36px
+      bottom: 30px
+      font-size: 2.1rem
+      &::before
+        height: 30px
+    .scrolldown .scroll-icon
+      font-size: 1.2rem
+      top: 24px
+      right: 10px
+
+  @media only screen and (max-width: 600px)
+    #home
+      min-height: 702px
+    .home-content-tablecell
+      .row
+        max-width: 480px
+        padding-top: 12rem
+        padding-bottom: 12rem
+      h3
+        font-size: 1.7rem
+      h1
+        font-size: 4.8rem
+
+  @media only screen and (max-width: 500px)
+    .home-content-tablecell
+      .row
+        max-width: 420px
+      h3
+        font-size: 1.5rem
+      h1
+        font-size: 4.2rem
+    .home-social-list
+      left: 30px
+      bottom: 30px
+      font-size: 1.8rem
+      &::before
+        height: 24px
+
+  @media only screen and (max-width: 400px)
+    #home
+      min-height: 654px
+    .home-content-tablecell
+      .row
+        padding-top: 4.8rem
+        padding-bottom: 10.8rem
+      h3
+        font-size: 1.4rem
+      h1
+        font-size: 3.6rem
+
+  /* ===================================================================
+   *  11. about - (_layout.scss)
+   *
+   * -------------------------------------------------------------------
+
+  #about
+    position: relative
+    padding: 4.2rem 0 12rem
+    background-color: #FFFFFF
+    min-height: 696px
+    text-align: center
+    .about-wrap
+      max-width: 850px
+    span
+      color: #07617d
+    h3
+      font-family: "montserrat-bold", sans-serif
+      font-size: 1.8rem
+      line-height: 1.667
+      color: #07617d
+      text-transform: uppercase
+      letter-spacing: .3rem
+      position: relative
+      &::before
+        display: block
+        content: ""
+        width: 3px
+        height: 9.6rem
+        background-color: rgba(149, 149, 149, 0.7)
+        margin: 0 auto 2.4rem
+    .lead
+      font-family: "librebaskerville-bold", serif
+      font-size: 4rem
+      line-height: 1.8
+      color: #2e383f
+      margin-top: 6rem
+
+  /* -------------------------------------------------------------------
+   * responsive:
+   * about
+   * -------------------------------------------------------------------
+  @media only screen and (max-width: 1024px)
+    #about
+      min-height: 636px
+      .about-wrap
+        max-width: 800px
+      .lead
+        font-size: 3.8rem
+
+  @media only screen and (max-width: 900px)
+    #about
+      .about-wrap
+        max-width: 720px
+      .lead
+        font-size: 3.6rem
+
+  @media only screen and (max-width: 768px)
+    #about
+      h3
+        font-size: 1.7rem
+      .about-wrap
+        max-width: 600px
+      .lead
+        font-size: 3.1rem
+
+  @media only screen and (max-width: 600px)
+    #about
+      min-height: auto
+      .about-wrap
+        max-width: 500px
+      .lead
+        margin-top: 4.8rem
+        font-size: 2.8rem
+
+  @media only screen and (max-width: 500px)
+    #about
+      h3
+        font-size: 1.5rem
+      .lead
+        font-size: 2.5rem
+
+  @media only screen and (max-width: 400px)
+    #about
+      padding: 4.2rem 0 9.6rem
+      .about-wrap
+        max-width: 380px
+      .lead
+        font-size: 2.3rem
+
+  /* ===================================================================
+   *  12. services - (_layout.scss)
+   *
+   * -------------------------------------------------------------------
+
+  #services
+    background-color: #19191b
+    background-image: url(../images/services-bg.jpg)
+    background-repeat: no-repeat
+    background-position: center
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    background-size: cover
+    min-height: 800px
+    position: relative
+    padding: 15rem 0 15rem
+    color: rgba(255, 255, 255, 0.3)
+    .overlay
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-color: rgba(5, 5, 5, 0.7)
+    .gradient-overlay
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      opacity: .4
+      background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.85) 0%, transparent 100%)
+      background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.85) 0%, transparent 100%)
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85) 0%, transparent 100%)
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9000000', endColorstr='#00000000',GradientType=0 )
+    .section-intro
+      h3
+        color: rgba(242, 242, 242, 0.5)
+      h1
+        color: #FFFFFF
+      .lead
+        color: rgba(242, 242, 242, 0.4)
+    .services-content
+      text-align: center
+      max-width: 1040px
+    .services-list
+      margin-top: 1.2rem
+      text-align: center
+      .service-item
+        margin-bottom: 3rem
+        padding: 0 50px
+        p
+          color: rgba(242, 242, 242, 0.5)
+      .icon
+        display: inline-block
+        margin-bottom: 1.5rem
+        i
+          font-size: 5.4rem
+          color: #f9a828
+      .h05
+        font-size: 1.7rem
+        line-height: 1.765
+        color: #FFFFFF
+        margin-bottom: 3rem
+
+  /* -------------------------------------------------------------------
+   * responsive:
+   * services
+   * -------------------------------------------------------------------
+  @media only screen and (max-width: 1024px)
+    #services .services-list .service-item
+      padding: 0 40px
+
+  @media only screen and (max-width: 900px)
+    #services .services-list .service-item
+      padding: 0 30px
+
+  @media only screen and (max-width: 768px)
+    #services
+      padding: 12rem 0 12rem
+      .services-content
+        max-width: 550px
+      .services-list
+        .service-item
+          padding: 0 15px
+        .icon i
+          font-size: 5.1rem
+
+  @media only screen and (max-width: 600px)
+    #services .services-list
+      .service-item
+        padding: 0 10px
+      .icon i
+        font-size: 5rem
+
+  @media only screen and (max-width: 400px)
+    #services .services-list .service-item
+      padding: 0
+
+  /* ===================================================================
+   *  13. portfolio - (_layout.scss)
+   *
+   * -------------------------------------------------------------------
+
+  #portfolio
+    background: #FFFFFF
+    min-height: 800px
+    position: relative
+    padding: 0
+    .intro-wrap
+      padding: 15rem 0 21rem
+      background: #111111
+    .section-intro
+      h3
+        color: rgba(242, 242, 242, 0.5)
+      h1
+        color: #FFFFFF
+      .lead
+        color: rgba(242, 242, 242, 0.4)
+    .portfolio-content
+      margin-top: -22.2rem
+    .bricks-wrapper
+      &:before
+        content: ""
+        display: table
+      &:after
+        content: ""
+        display: table
+        clear: both
+      .brick
+        float: left
+        width: 50%
+        padding: 0
+        margin: 0
+        &:nth-child(2n+1)
+          clear: both
+
+  /* -------------------------------------------------------------------
+   * masonry entries - (_layout.css)
+   * -------------------------------------------------------------------
+
+  .bricks-wrapper .item-wrap
+    position: relative
+    overflow: hidden
+    .overlay
+      cursor: zoom-in
+      img
+        vertical-align: bottom
+        -moz-transition: all 0.3s ease-in-out
+        -o-transition: all 0.3s ease-in-out
+        -webkit-transition: all 0.3s ease-in-out
+        -ms-transition: all 0.3s ease-in-out
+        transition: all 0.3s ease-in-out
+      &::before
+        content: ""
+        display: block
+        background: rgba(0, 0, 0, 0.8)
+        opacity: 0
+        visibility: hidden
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        -moz-transition: all 0.5s ease-in-out
+        -o-transition: all 0.5s ease-in-out
+        -webkit-transition: all 0.5s ease-in-out
+        -ms-transition: all 0.5s ease-in-out
+        transition: all 0.5s ease-in-out
+        z-index: 1
+      &::after
+        content: "..."
+        font-family: georgia, serif
+        font-size: 3rem
+        z-index: 1
+        display: block
+        height: 30px
+        width: 30px
+        line-height: 30px
+        margin-left: -15px
+        margin-top: -15px
+        position: absolute
+        left: 50%
+        top: 50%
+        text-align: center
+        color: #FFFFFF
+        opacity: 0
+        visibility: hidden
+        -moz-transition: all 0.3s ease-in-out
+        -o-transition: all 0.3s ease-in-out
+        -webkit-transition: all 0.3s ease-in-out
+        -ms-transition: all 0.3s ease-in-out
+        transition: all 0.3s ease-in-out
+        -webkit-transform: scale(0.5)
+        -ms-transform: scale(0.5)
+        transform: scale(0.5)
+    .item-text
+      position: absolute
+      top: 0
+      left: 0
+      padding: 3.6rem 0 0 3rem
+      margin-right: 6rem
+      z-index: 3
+      .folio-title
+        color: #FFFFFF
+        font-size: 2.2rem
+        line-height: 1.364
+      .folio-types
+        font-family: "montserrat-regular", sans-serif
+        font-size: 1.1rem
+        line-height: 1.5rem
+        text-transform: uppercase
+        letter-spacing: .1rem
+        color: rgba(255, 255, 255, 0.7)
+        display: block
+    .details-link
+      display: block
+      background-color: transparent
+      border: 1px solid rgba(255, 255, 255, 0.3)
+      height: 4.6rem
+      width: 4.6rem
+      line-height: 4.6rem
+      color: white
+      text-align: center
+      z-index: 2
+      border-radius: 3px
+      position: absolute
+      top: 3.6rem
+      right: 3rem
+      i
+        font-size: 2rem
+        line-height: 4.2rem
+      &:hover, &:focus
+        background-color: #FFFFFF
+        color: #000000
+    .item-text, .details-link
+      opacity: 0
+      visibility: hidden
+      -webkit-transform: translateY(100%)
+      -ms-transform: translateY(100%)
+      transform: translateY(100%)
+      -moz-transition: all 0.3s ease-in-out
+      -o-transition: all 0.3s ease-in-out
+      -webkit-transition: all 0.3s ease-in-out
+      -ms-transition: all 0.3s ease-in-out
+      transition: all 0.3s ease-in-out
+    &:hover
+      .overlay
+        &::before
+          opacity: 1
+          visibility: visible
+        &::after
+          opacity: 1
+          visibility: visible
+          -webkit-transform: scale(1)
+          -ms-transform: scale(1)
+          transform: scale(1)
+        img
+          -webkit-transform: scale(1.05)
+          -ms-transform: scale(1.05)
+          transform: scale(1.05)
+      .item-text, .details-link
+        opacity: 1
+        visibility: visible
+        -webkit-transform: translateX(0)
+        -ms-transform: translateX(0)
+        transform: translateX(0)
+
+  /* -------------------------------------------------------------------
+   * Light Gallery Overrides - (_layout.css)
+   * -------------------------------------------------------------------
+
+  .lg-sub-html
+    padding: 12px 20% 15px
+    a
+      color: #f9a828
+      &:visited
+        color: #f9a828
+      &:hover, &:focus
+        color: #FFFFFF
+    h4
+      color: #FFFFFF
+      font-family: "montserrat-regular", sans-serif
+      font-size: 1.8rem
+      line-height: 1.333
+    p
+      font-family: "montserrat-regular", sans-serif
+      font-size: 1.3rem
+      line-height: 2.4rem
+      margin: .6rem 0 0
+      color: rgba(255, 255, 255, 0.6)
+
+  @media only screen and (max-width: 1024px)
+    .lg-sub-html
+      padding: 12px 15% 15px
+
+  @media only screen and (max-width: 768px)
+    .lg-sub-html
+      padding: 12px 40px 15px
+
+  .lg-outer .lg-thumb-item
+    &.active, &:hover
+      border-color: #f9a828
+
+  .lg-progress-bar .lg-progress
+    background-color: #FFFFFF
+
+  #lg-counter
+    font-family: "montserrat-regular", sans-serif
+
+  /* -------------------------------------------------------------------
+   * responsive:
+   * portfolio
+   * -------------------------------------------------------------------
+  @media only screen and (max-width: 768px)
+    #portfolio .intro-wrap
+      padding: 12rem 0 21rem
+
+  @media only screen and (max-width: 600px)
+    #portfolio .bricks-wrapper .brick
+      float: none
+      width: 100%
+    .bricks-wrapper .item-wrap .item-text .folio-title
+      font-size: 2rem
+      line-height: 1.5
+
+  /* ===================================================================
+   *  14. testimonials - (_layout.scss)
+   *
+   * -------------------------------------------------------------------
+
+  #testimonials
+    background: #FFFFFF
+    padding: 12rem 0 7.8rem
+    text-align: center
+    h2
+      font-family: "montserrat-bold", sans-serif
+      font-size: 1.8rem
+      line-height: 1.667
+      color: #07617d
+      text-transform: uppercase
+      letter-spacing: .3rem
+      position: relative
+      margin-bottom: 4.2rem
+    .flex-container
+      width: 80%
+      max-width: 900px
+      margin: 0 auto
+
+  #testimonial-slider
+    margin: 0 0 3rem 0
+    position: relative
+    .slides
+      padding-bottom: 3rem
+    p
+      font-family: "librebaskerville-bold", serif
+      font-size: 3rem
+      line-height: 1.8
+      color: #151515
+      &::before, &::after
+        display: inline-block
+        font-family: "librebaskerville-bold", serif
+        font-size: 3.6rem
+        line-height: 1
+      &::before
+        content: '\201C'
+      &::after
+        content: '\201D'
+    .testimonial-author
+      margin-top: 4.2rem
+      img
+        width: 7.4rem
+        height: 7.4rem
+        margin: 0 auto 1.2rem auto
+        display: block
+        border-radius: 50%
+        vertical-align: middle
+      .author-info
+        display: inline-block
+        vertical-align: middle
+        text-align: center
+        font-family: "librebaskerville-bold", sans-serif
+        font-size: 2rem
+        margin-top: .9rem
+        margin-bottom: 3rem
+        color: #151515
+        span
+          display: block
+          font-family: "montserrat-bold", sans-serif
+          font-size: 1.6rem
+          line-height: 1.313
+          letter-spacing: 0
+          text-transform: none
+          color: rgba(0, 0, 0, 0.5)
+          margin-top: .3rem
+
+  /* control nav
+
+  #testimonials
+    .flex-control-nav
+      width: 100%
+      text-align: center
+      display: block
+      position: absolute
+      bottom: -1.5rem
+      li
+        margin: 0 6px
+        display: inline-block
+        zoom: 1
+    .flex-control-paging li a
+      width: 9px
+      height: 9px
+      background-color: #959595
+      display: block
+      cursor: pointer
+      border-radius: 50%
+      font: 0/0 a
+      text-shadow: none
+      color: transparent
+      &:hover
+        background-color: #555555
+      &.flex-active
+        background-color: #000000
+
+  /* -------------------------------------------------------------------
+   * responsive:
+   * testimonials
+   * -------------------------------------------------------------------
+  @media only screen and (max-width: 1024px)
+    #testimonial-slider p
+      font-size: 2.8rem
+
+  @media only screen and (max-width: 768px)
+    #testimonials h2
+      font-size: 1.7rem
+    #testimonial-slider
+      p
+        font-size: 2.5rem
+      .testimonial-author
+        img
+          width: 6.6rem
+          height: 6.6rem
+        .author-info
+          font-size: 1.8rem
+          span
+            font-size: 1.5rem
+
+  @media only screen and (max-width: 600px)
+    #testimonials .flex-container
+      width: 90%
+    #testimonial-slider p
+      font-size: 2.2rem
+
+  @media only screen and (max-width: 500px)
+    #testimonials h2
+      font-size: 1.5rem
+
+  @media only screen and (max-width: 400px)
+    #testimonials .flex-container
+      width: 100%
+    #testimonial-slider p
+      font-size: 2rem
+
+  /* ===================================================================
+   *  15. clients - (_layout.scss)
+   *
+   * -------------------------------------------------------------------
+
+  #clients
+    background-color: #e9eaea
+    padding: 4.8rem 0 4.8rem
+    .client-lists .owl-item
+      opacity: .6
+      -moz-transition: all 0.6s ease-in-out
+      -o-transition: all 0.6s ease-in-out
+      -webkit-transition: all 0.6s ease-in-out
+      -ms-transition: all 0.6s ease-in-out
+      transition: all 0.6s ease-in-out
+      &:hover
+        opacity: 1
+    .owl-carousel
+      .owl-nav
+        margin-top: 1.8rem
+        margin-bottom: 1.5rem
+        text-align: center
+        -webkit-tap-highlight-color: transparent
+        [class*='owl-']
+          color: #FFFFFF
+          font-family: "montserrat-regular", sans-serif
+          font-size: 1.4rem
+          height: 3rem
+          line-height: 3rem
+          margin: .6rem
+          padding: 0 10px
+          background: rgba(0, 0, 0, 0.5)
+          display: inline-block
+          cursor: pointer
+          border-radius: 3px
+          &:hover
+            background: rgba(0, 0, 0, 0.7)
+            color: #FFFFFF
+            text-decoration: none
+        .disabled
+          background: rgba(0, 0, 0, 0.2)
+          cursor: default
+        &.disabled + .owl-dots
+          margin-top: 1.8rem
+      .owl-dots
+        text-align: center
+        -webkit-tap-highlight-color: transparent
+        .owl-dot
+          display: inline-block
+          zoom: 1
+          *display: inline
+          span
+            width: 9px
+            height: 9px
+            background-color: #959595
+            margin: 6px 6px
+            display: block
+            -webkit-backface-visibility: visible
+            transition: opacity 200ms ease
+            border-radius: 50%
+          &.active span, &:hover span
+            background-color: #000000
+
+  /* ===================================================================
+   *  16. contact - (_layout.scss)
+   *
+   * -------------------------------------------------------------------
+
+  #contact
+    background-color: #111111
+    background-image: url(../images/contact-bg.jpg)
+    background-repeat: no-repeat
+    background-position: center
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    background-size: cover
+    padding: 12rem 0 12rem
+    position: relative
+    .overlay
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      opacity: .75
+      background-color: #000000
+    .section-intro
+      h1
+        color: white
+      h3
+        color: rgba(242, 242, 242, 0.5)
+      p.lead
+        color: rgba(242, 242, 242, 0.4)
+
+  .contact-content
+    max-width: 1024px
+    margin-top: 3rem
+    color: #FFFFFF
+    z-index: 600
+    position: relative
+    h5
+      color: #FFFFFF
+      margin-bottom: 5.4rem
+    h6
+      color: #555555
+      font-size: 1.4rem
+
+  /* contact info
+
+  .contact-info .cinfo
+    margin-bottom: 4.2rem
+
+  /* contact form
+
+  #contact
+    form
+      margin-top: 0
+      margin-bottom: 3rem
+      .form-field
+        position: relative
+        &:before
+          content: ""
+          display: table
+        &:after
+          content: ""
+          display: table
+          clear: both
+        label
+          font-family: "montserrat-bold", sans-serif
+          font-size: 1rem
+          line-height: 1.4
+          position: absolute
+          bottom: 1.5rem
+          right: 0
+          text-transform: uppercase
+          letter-spacing: .05rem
+          padding: .6rem 2rem .6rem 2rem
+          margin: 0
+          color: #000000
+          background: #f9a828
+          border-radius: 3px
+          &::after
+            position: absolute
+            right: 15px
+            top: 1px
+            margin-top: -6px
+            border-left: 5px solid transparent
+            border-right: 5px solid transparent
+            border-bottom: 5px solid #f9a828
+            content: ""
+      \::-webkit-input-placeholder
+        color: rgba(255, 255, 255, 0.3)
+      \:-moz-placeholder
+        color: rgba(255, 255, 255, 0.3)
+        /* Firefox 18-
+      \::-moz-placeholder
+        color: rgba(255, 255, 255, 0.3)
+        /* Firefox 19+
+      \:-ms-input-placeholder
+        color: rgba(255, 255, 255, 0.3)
+      .placeholder
+        color: rgba(255, 255, 255, 0.3) !important
+    input
+      &[type="text"], &[type="password"], &[type="email"]
+        width: 100%
+        color: rgba(255, 255, 255, 0.6)
+        margin-bottom: 3.6rem
+        background: rgba(255, 255, 255, 0.1)
+    textarea
+      width: 100%
+      color: rgba(255, 255, 255, 0.6)
+      margin-bottom: 3.6rem
+      background: rgba(255, 255, 255, 0.1)
+    input
+      &[type="text"]:focus, &[type="password"]:focus, &[type="email"]:focus
+        color: #FFFFFF
+    textarea
+      min-height: 21rem
+      padding: 1.8rem 2rem
+      &:focus
+        color: #FFFFFF
+    button.submitform
+      font-size: 1.5rem
+      display: block
+      letter-spacing: .2rem
+      height: 6rem
+      line-height: 6rem
+      padding: 0 3rem
+      width: 100%
+      background: #f9a828
+      color: #000000
+      margin-top: .6rem
+      &:hover, &:focus
+        background: #f89e0f
+
+  #message-warning, #message-success
+    display: none
+    background: #000000
+    padding: 3rem
+    margin-bottom: 3.6rem
+    width: 100%
+
+  #message-warning
+    color: #D32B2E
+
+  #message-success
+    color: #f9a828
+
+  #message-warning i, #message-success i
+    margin-right: 10px
+
+  /* form loader
+
+  #submit-loader
+    display: none
+    position: relative
+    left: 0
+    top: 1.8rem
+    width: 100%
+    text-align: center
+    margin-bottom: 4.2rem
+    .text-loader
+      display: none
+      font-family: "montserrat-bold", sans-serif
+      font-size: 1.4rem
+      color: #FFFFFF
+      letter-spacing: .2rem
+      text-transform: uppercase
+
+  .oldie #submit-loader
+    .s-loader
+      display: none
+    .text-loader
+      display: block
+
+  /* ---------------------------------------------------------------
+   * loader animation - (_layout.scss)
+   * ---------------------------------------------------------------
+
+  .s-loader
+    margin: 1.2rem auto 3rem
+    width: 70px
+    text-align: center
+    -webkit-transform: translateX(0.45rem)
+    -ms-transform: translateX(0.45rem)
+    transform: translateX(0.45rem)
+    > div
+      width: 9px
+      height: 9px
+      background-color: #FFFFFF
+      border-radius: 100%
+      display: inline-block
+      margin-right: .9rem
+      -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both
+      animation: sk-bouncedelay 1.4s infinite ease-in-out both
+    .bounce1
+      -webkit-animation-delay: -0.32s
+      animation-delay: -0.32s
+    .bounce2
+      -webkit-animation-delay: -0.16s
+      animation-delay: -0.16s
+
+  @-webkit-keyframes sk-bouncedelay
+    0%, 80%, 100%
+      -webkit-transform: scale(0)
+      -ms-transform: scale(0)
+      transform: scale(0)
+
+    40%
+      -webkit-transform: scale(1)
+      -ms-transform: scale(1)
+      transform: scale(1)
+
+
+  @keyframes sk-bouncedelay
+    0%, 80%, 100%
+      -webkit-transform: scale(0)
+      -ms-transform: scale(0)
+      transform: scale(0)
+
+    40%
+      -webkit-transform: scale(1)
+      -ms-transform: scale(1)
+      transform: scale(1)
+
+
+  /* -------------------------------------------------------------------
+   * responsive:
+   * contact
+   * -------------------------------------------------------------------
+  @media only screen and (max-width: 900px)
+    .contact-info
+      width: 38%
+
+  @media only screen and (max-width: 768px)
+    .contact-content
+      max-width: 600px
+      text-align: center
+    .contact-info
+      width: 100%
+      margin-top: 3.6rem
+
+  @media only screen and (max-width: 600px)
+    .contact-content
+      max-width: 480px
+
+  @media only screen and (max-width: 400px)
+    .contact-info
+      width: 100% !important
+      float: none !important
+      clear: both !important
+      margin-left: 0
+      margin-right: 0
+      padding: 0
+
+  /* ===================================================================
+   *  17. footer - (_layout.scss)
+   *
+   * -------------------------------------------------------------------
+
+  footer
+    margin: 0 0 5.4rem 0
+    padding: 0
+    font-size: 1.5rem
+    color: rgba(255, 255, 255, 0.4)
+    a
+      color: #FFFFFF
+      &:visited
+        color: #FFFFFF
+      &:hover, &:focus
+        color: #f9a828
+    .row
+      max-width: 1024px
+    h4.h05
+      color: #FFFFFF
+      position: relative
+      padding-bottom: 4.2rem
+      margin-bottom: 3.6rem
+      &::after
+        display: block
+        content: ""
+        width: 100px
+        height: 1px
+        background-color: rgba(255, 255, 255, 0.1)
+        position: absolute
+        bottom: 0
+        left: 0
+
+  /* footer main
+   * ---------------------------------
+
+  .footer-main
+    padding-top: 9.6rem
+    padding-bottom: 3rem
+    ul
+      font-size: 1.5rem
+      margin-left: 0
+      li
+        list-style: none
+        padding-left: 0
+      a
+        color: rgba(255, 255, 255, 0.4)
+        &:visited
+          color: rgba(255, 255, 255, 0.4)
+        &:hover, &:focus
+          color: #FFFFFF
+    .subscribe-form
+      position: relative
+    #mc-form
+      margin: 0
+      padding: 0
+      input[type="email"]
+        height: 6rem
+        padding: 1.5rem 8rem 1.5rem 2rem
+        margin-bottom: 1.5rem
+        width: 100%
+        background-color: rgba(0, 0, 0, 0.9)
+      button
+        background-color: #f9a828
+        color: #000000
+        width: 6rem
+        height: 6rem
+        line-height: 6rem
+        margin: 0
+        padding: 0
+        position: absolute
+        right: 0
+        top: 0
+        &:hover
+          background-color: #f89e0f
+        i
+          font-size: 2.6rem
+          line-height: 6rem
+          margin: 0
+          position: relative
+          left: .2rem
+      label
+        color: #f9a828
+        font-family: "montserrat-regular", sans-serif
+
+  /* footer bottom
+   * ---------------------------------
+
+  .footer-bottom
+    margin-top: 3rem
+    text-align: center
+    font-family: "montserrat-regular", sans-serif
+    font-size: 1.4rem
+    .copyright span
+      display: inline-block
+      &::after
+        content: "|"
+        display: inline-block
+        padding: 0 1rem 0 1.2rem
+        color: rgba(255, 255, 255, 0.1)
+      &:last-child::after
+        display: none
+
+  #go-top
+    position: fixed
+    bottom: 42px
+    right: 30px
+    z-index: 700
+    display: none
+    a
+      text-decoration: none
+      border: 0 none
+      display: block
+      height: 63px
+      width: 60px
+      line-height: 63px
+      text-align: center
+      background-color: #000000
+      color: #888
+      text-align: center
+      text-transform: uppercase
+      -moz-transition: all 0.3s ease-in-out
+      -o-transition: all 0.3s ease-in-out
+      -webkit-transition: all 0.3s ease-in-out
+      -ms-transition: all 0.3s ease-in-out
+      transition: all 0.3s ease-in-out
+      i
+        font-size: 1.7rem
+        line-height: inherit
+      &:visited
+        background: #000000
+        color: #888
+      &:hover, &:focus
+        background: #000000
+        color: #FFFFFF
+
+  /* -------------------------------------------------------------------
+   * responsive:
+   * footer
+   * -------------------------------------------------------------------
+  @media only screen and (max-width: 768px)
+    #go-top
+      bottom: 0
+      right: 0
+    .footer-main
+      text-align: center
+      .row
+        max-width: 480px
+      [class*="col-"]
+        margin-bottom: 3.6rem
+    footer h4.h05
+      padding-bottom: 3rem
+      margin-bottom: 3rem
+      &::after
+        left: 50%
+        margin-left: -50px
+
+  @media only screen and (max-width: 600px)
+    .footer-bottom
+      padding-bottom: .6rem
+      .copyright span
+        display: block
+        &::after
+          display: none
