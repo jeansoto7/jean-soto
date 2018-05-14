@@ -1,0 +1,83 @@
+
+<div class="chavon-portal" style="background-image: url({{site.baseurl}}/assets/img/tareas/tarea-8/background-4.jpg)">
+  <div class="container-chavon-portal">
+    <div class="container-top">
+      <div class="chavon-portal-logo">
+        <h3>ChavoPortal</h3><img src="{{site.baseurl}}/assets/img/tareas/tarea-8/logo-chavon-white.svg" title="Chavon Portal" alt="Logo Chavon White"/>
+      </div>
+      <div class="chavon-top-bar">
+        <h3>Student Progress</h3>
+        <div class="progress-bar">
+          <h4>Weeks:</h4>
+          <div class="progress-bar-group">
+            <p>10/15</p>
+            <div class="the-bar">
+              <div class="progress-level"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-bottom">
+      <div class="container-side-bar">
+        <div class="main-sections">
+          <h2>Main Sections</h2>
+          <ul>
+            <li><a class="main-section-list fa fa-newspaper-o" href="{{site.baseurl}}/folders/classes/interactividad/tarea-8/announcements/">Announcements</a></li>
+            <li><a class="main-section-list fa fa-hand-paper-o" href="{{site.baseurl}}/folders/classes/interactividad/tarea-8/">ChavoGossip</a></li>
+            <li><a class="main-section-list fa fa-inbox active" href="{{site.baseurl}}/folders/classes/interactividad/tarea-7/">Suggestion Box</a></li>
+            <li><a class="main-section-list fa fa-user-circle-o" href="{{site.baseurl}}/folders/classes/interactividad/tarea-8/teachers/">Teachers</a></li>
+          </ul>
+        </div>
+        <div class="profile-section">
+          <div class="profile-pic-name"><img src="http://fillmurray.com/50/50" title="Bill Murray" alt="Profile Pic"/>
+            <p>Bill Murray</p>
+          </div>
+        </div>
+      </div>
+      <div class="container-content">
+        <div class="content-title">
+          <h2>Suggestion Box</h2>
+          <hr/>
+        </div>
+        <div class="suggestion-form" id="suggestionForm">
+          <div class="form-fill-out" id="formFillOut">
+            <form id="myform" method="POST" action="https://formspree.io/jeancarlos_soto1@hotmail.com">
+              <div class="form-display">
+                <div class="mc-field-group group-name" id="mcFieldGroup">
+                  <input name="name" id="userName" type="text"/>
+                  <label>Name </label>
+                </div>
+                <div class="mc-field-group group-email" id="mcFieldGroup">
+                  <input name="email" id="userEmail" type="email"/>
+                  <label>Email</label>
+                </div>
+                <div class="category-field">
+                  <div class="category-title">Category*</div>
+                  <div class="category-input">
+                    <input id="category_3_left" type="radio" name="category" value="Comments"/>
+                    <label for="category_3_left">Comments</label>
+                    <input id="category_3_center" type="radio" name="category" value="Questions"/>
+                    <label for="category_3_center">Questions</label>
+                    <input id="category_3_right" type="radio" name="category" value="Requests"/>
+                    <label for="category_3_right">Requests</label>
+                  </div>
+                </div>
+                <div class="mc-field-group group-title" id="mcFieldGroup">
+                  <input name="title" id="userTitle" type="text"/>
+                  <label>Suggestion Title*</label>
+                </div>
+                <div class="mc-field-group group-description" id="mcFieldGroup">
+                  <textarea class="description-textarea" name="description" id="userDescription" rows="2" placeholder="Suggestion Description*"></textarea>
+                </div>
+                <div class="group-submit">
+                  <input class="submit-button" id="submitBtn" form="myform" type="submit" value="Submit"/>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

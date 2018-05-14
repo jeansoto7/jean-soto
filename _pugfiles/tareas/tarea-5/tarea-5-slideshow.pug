@@ -1,0 +1,101 @@
+mixin carouselpaging(name)
+  .title-tarea-5
+    h2.shop-title= name
+    hr.thehr  
+  #slider-wrap
+    .arrows-carousel.carousel-height
+      #toggle-left
+        i.previousarrow.fa.fa-angle-left
+      #toggle-right
+        i.nextarrow.fa.fa-angle-right
+    #slider-paging.carousel-height
+      ul.slider-pages
+        li#slider-page-1.slider-page
+          .triangle-bottom
+          .triangle-top
+        li#slider-page-2.slider-page
+          .triangle-bottom
+          .triangle-top
+        li#slider-page-3.slider-page
+          .triangle-bottom
+          .triangle-top
+        li#slider-page-4.slider-page
+          .triangle-bottom
+          .triangle-top
+        li#slider-page-5.slider-page
+          .triangle-bottom
+          .triangle-top  
+
+mixin slideshow(title, href)
+  li.slide(id=idName)
+    .carousel-info-button.carousel-height
+      h1= title
+      a(href='{{site.baseurl}}/assets/img/tareas/tarea-5/' + href + '-large.jpg', , download='')
+        button.top-carousel-button.button Download HD
+    .overlay.carousel-height
+    .carousel-image.carousel-height(style='background-image: url({{site.baseurl}}/assets/img/tareas/tarea-5/' + href + '.jpg)')
+
+.tarea-5-slideshow.carousel-height
+  header.slideshow-header(style="background-image: url({{site.baseurl}}/assets/img/tareas/tarea-5/background-tarea-5.jpg)")
+    .slideshow-overlay
+    nav.nav-slideshow-bar
+      a.slideshow-logo(href="{{site.baseurl}}/folders/classes/interactividad/tarea-5/") Abstractus
+      ul.nav-slideshow-ul
+        li: a(href="#misceleneous") Miscellaneous
+        li: a(href="#cristal") Cristal
+        li: a(href="#nature") Nature
+        li: a(href="#pattern") Pattern
+    .main-title
+      h1 Abstract Photography
+      p By Jean Soto
+  
+  +carouselpaging('Miscellaneous Collection')
+  #slider
+    ul.slides#misceleneous
+      +slideshow('carmina', 'misceleneous-1')
+      +slideshow('cinere', 'misceleneous-2')
+      +slideshow('Cathedra', 'misceleneous-3')
+      +slideshow('Flavo', 'misceleneous-4')
+      +slideshow('Vehentem', 'misceleneous-5')
+    
+  +carouselpaging('Cristal Collection')
+  #slider
+    ul.slides#cristal
+      +slideshow('globus', 'cristals-1')
+      +slideshow('poculum', 'cristals-2')
+      +slideshow('odoratus', 'cristals-3')
+      +slideshow('unguentum', 'cristals-4')
+      +slideshow('luminis', 'cristals-5')
+    
+  +carouselpaging('Nature Collection')
+  #slider
+    ul.slides#nature
+      +slideshow('aecor', 'nature-1')
+      +slideshow('fluctus', 'nature-2')
+      +slideshow('ramus', 'nature-3')
+      +slideshow('procella', 'nature-4')
+      +slideshow('pertusum', 'nature-5')
+    
+  +carouselpaging('Pattern Collection')
+  #slider
+    ul.slides#pattern
+      +slideshow('currus', 'pattern-1')
+      +slideshow('caseum', 'pattern-2')
+      +slideshow('haeret', 'pattern-3')
+      +slideshow('salo', 'pattern-4')
+      +slideshow('KDK', 'pattern-5')
+
+footer.footer
+  .social-media
+    a(target="_blank" href="https://www.instagram.com/").fa.fa-instagram
+    a(target="_blank" href="https://www.facebook.com/").fa.fa-facebook
+    a(target="_blank" href="https://www.twitter.com/").fa.fa-twitter
+    a(target="_blank" href="http://tumblr.com/").fa.fa-tumblr
+    a(target="_blank" href="https://www.pinterest.com/").fa.fa-pinterest-p
+    a(target="_blank" href="https://plus.google.com/").fa.fa-google-plus
+
+  .copyright
+    p
+      | Design and code by 
+      a(target="_blank" href="http://www.jeansoto.com") Jean Soto
+      | , &copy; Copyright 2017 Abstractus

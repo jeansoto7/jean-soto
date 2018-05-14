@@ -1,0 +1,92 @@
+.chavon-portal(style="background-image: url({{site.baseurl}}/assets/img/tareas/tarea-8/background-4.jpg)")
+  .container-chavon-portal
+    
+    .container-top
+      .chavon-portal-logo
+        h3 ChavoPortal
+        img(src="{{site.baseurl}}/assets/img/tareas/tarea-8/logo-chavon-white.svg", title="Chavon Portal", alt="Logo Chavon White")
+      
+      .chavon-top-bar
+        h3 Student Progress
+        .progress-bar
+          h4 Weeks:
+          .progress-bar-group
+            p 10/15
+            .the-bar
+              .progress-level
+        //- a.view-profile(href="{{site.baseurl}}/folders/classes/interactividad/tarea-8/profile/")
+        //-   button.view-profile-button(title='View Profile') View Your Profile
+    
+    .container-bottom
+      .container-side-bar
+        .main-sections
+          h2 Main Sections
+          ul
+            li: a.main-section-list.fa.fa-newspaper-o(href="{{site.baseurl}}/folders/classes/interactividad/tarea-8/announcements/") Announcements
+            li: a.main-section-list.fa.fa-hand-paper-o(href="{{site.baseurl}}/folders/classes/interactividad/tarea-8/") ChavoGossip
+            li: a.main-section-list.fa.fa-inbox.active(href="{{site.baseurl}}/folders/classes/interactividad/tarea-7/") Suggestion Box
+            li: a.main-section-list.fa.fa-user-circle-o(href="{{site.baseurl}}/folders/classes/interactividad/tarea-8/teachers/") Teachers
+        .profile-section
+          //- a.profile-section-anchor(href="{{site.baseurl}}/folders/classes/interactividad/tarea-8/profile/")
+          .profile-pic-name
+            img(src="http://fillmurray.com/50/50", title="Bill Murray", alt="Profile Pic")
+            p Bill Murray
+            //- .fa.fa-gear
+      
+      .container-content
+        .content-title
+          h2 Suggestion Box
+          hr
+        .suggestion-form#suggestionForm
+          .form-fill-out#formFillOut
+            form#myform(method='POST', action='https://formspree.io/jeancarlos_soto1@hotmail.com')
+              .form-display
+                .mc-field-group#mcFieldGroup.group-name
+                  input(name='name', id="userName", type='text')
+                  label Name 
+                .mc-field-group#mcFieldGroup.group-email
+                  input(name='email', id="userEmail", type='email')
+                  label Email
+                .category-field
+                  .category-title Category*
+                  .category-input
+                    input#category_3_left(type='radio', name='category', value='Comments')
+                    label(for='category_3_left') Comments
+                    input#category_3_center(type='radio', name='category', value='Questions')
+                    label(for='category_3_center') Questions
+                    input#category_3_right(type='radio', name='category', value='Requests')
+                    label(for='category_3_right') Requests
+                .mc-field-group#mcFieldGroup.group-title
+                  input(name='title', id="userTitle", type='text')
+                  label Suggestion Title*
+                .mc-field-group#mcFieldGroup.group-description
+                  textarea.description-textarea(name='description', id="userDescription", rows='2', placeholder="Suggestion Description*")
+
+                .group-submit
+                  input.submit-button#submitBtn(form='myform', type='submit', value='Submit')
+        
+        //- form#myform
+        //-   label De parte de
+        //-   input(name='name', type='text', placeholder='Nombre completo')
+        //-   br
+        //-   label Cédula o No. pasaporte
+        //-   input#id_number(name='id', type='text')
+        //-   br
+        //-   label E-mail
+        //-   br
+        //-   input(name='email', type='text', placeholder='ejemplo@ejemplo.com')
+        //-   br
+        //-   label Teléfono
+        //-   input#phone_number(name='phone', type='text')
+        //-   br
+        //-   label Le quiero enviar un regalo a
+        //-   input(name='name2', type='text', placeholder='Nombre completo')
+        //-   br
+        //-   label Dirección del destinatario
+        //-   input(name='address', type='text', placeholder='Dirección completa')
+        //-   br
+        //-   label Mensaje
+        //-   textarea(name='message', id='', cols='30', rows='10')
+        //-   br
+        //-   button.send(form='myform', type='submit') Enviar
+                  

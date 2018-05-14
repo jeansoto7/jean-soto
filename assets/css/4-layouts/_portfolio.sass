@@ -1,0 +1,130 @@
+.portfolio-home
+  font-family: 'Montserrat', sans-serif
+
+  .nav-horizontal-ul, .nav-vertical-ul
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: absolute
+    height: 100%
+    background: $jeankee-lightgrey
+
+    li
+      font-size: $base-spacing*1.4
+      letter-spacing: $base-spacing*.2
+      text-transform: uppercase
+      font-weight: 800
+
+    span
+      position: relative
+      display: block
+      cursor: pointer
+
+    span:before, span:after
+      content: ''
+      position: absolute
+      width: 0%
+      height: 2px
+      top: 50%
+      margin-top: -0.5px
+      background: $jeankee-darkgrey
+
+    span:before
+      left: -2.5px
+
+    span:after
+      right: 2.5px
+      background: $jeankee-darkgrey
+      @include transition(all 0.3s $ease-in-out-cubic)
+
+
+    span:hover:before
+      background: $jeankee-darkgrey
+      width: 100%
+      @include transition(all 0.3s $ease-in-out-cubic)
+
+
+    span:hover:after
+      background: transparent
+      width: 100%
+      transition: 0s
+
+
+    // a
+    //   border: 2px solid red
+    //   pointer-events: auto
+
+  .nav-horizontal-ul
+    padding: $base-spacing*0
+    width: 100%
+
+    li:first-child
+      margin: -$base-spacing
+      // line-height: 0
+      transform: rotate(90deg)
+
+    li:last-child
+      transform: rotate(-90deg)
+
+  .nav-vertical-ul, .portfolio-bg-image
+    margin: auto
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+
+  .nav-vertical-ul
+    padding: $base-spacing*1
+    flex-direction: column
+    width: 50%
+
+    // li
+
+  .portfolio-bg-image
+    position: absolute
+    width: 40%
+
+// Work Gallery
+.work-gallery
+  width: 100%
+  // min-height: 100%
+  background: $jeankee-lightgrey
+  border: 2px solid red
+
+  .nav-vertical-ul
+    z-index: 0
+
+  .header-logo
+    width: 5%
+    margin: $base-spacing
+
+  .work-show
+    display: flex
+    justify-content: center
+    align-items: stretch
+    position: relative
+
+  .left-work-column, .right-work-column
+    width: 35%
+    z-index: 1
+
+  .left-work-column
+    padding-top: $base-spacing*8
+    margin-right: $base-spacing*4
+
+  .work-image-container
+    width: 100%
+    height: auto
+    overflow: hidden
+    transition: $base-transition
+
+    &:hover
+      transform: scale(0.9)
+
+  .work-image
+    width: 100%
+    height: auto
+    transition: $base-transition
+
+    &:hover
+      transform: scale(1.2)

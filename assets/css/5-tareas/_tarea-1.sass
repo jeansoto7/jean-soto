@@ -1,0 +1,146 @@
+// Header
+.tarea-1-header
+
+  .tarea-1-title-img
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 30vw
+
+    h1
+      position: absolute
+      font-size: $base-spacing*3
+      font-weight: 500
+      color: white
+      z-index: 2
+      text-transform: uppercase
+      text-align: center
+
+    .barney-img
+      width: 100%
+
+    .barney-img
+      position: relative
+      background:
+        position: center center
+        size: cover
+      height: 100%
+
+// Catchphrases Title
+.title-tarea-1
+  text-align: center
+
+  h2
+    font-size: $base-spacing*2
+
+  .thehr
+    margin: 0 auto
+    width: 10%
+    height: 1px
+    border: 0
+    border-top: 1px solid $jeankee-darkgrey
+
+
+// Catchphrases Imgs
+.catchphrases
+  margin: $base-spacing $base-spacing/2 0
+  display: flex
+  flex-wrap: wrap
+
+  .catchphrase-box
+    position: relative
+    overflow: hidden
+    width: 25%
+    margin: 0
+    padding: $base-spacing/2 $base-spacing/2
+
+    .catchphrase-image
+      overflow: hidden
+      position: relative
+
+      img
+        width: 100%
+        height: auto
+        transition: $base-transition
+
+        &:hover
+          transform: scale(1.1)
+
+    .catchphrase-caption
+      position: absolute
+      pointer-events: none
+      background: fade-out($jeankee-darkgrey, 0.3)
+      bottom: 0
+      top: 0
+      left: 0
+      right: 0
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+      padding: $base-spacing/2
+      opacity: 0
+      transition: $base-transition
+      transform: translate(0%, -100%) scale(0.5)
+
+      h3
+        font-weight: 400
+        color: white
+        margin: 0
+        font-size: $base-spacing*1.8
+        text-align: center
+
+    .catchphrase-image:hover .catchphrase-caption
+      opacity: 1
+      transform: translate(0%, 0%) scale(1)
+
+    .catchphrase-image:hover img
+      transform: scale(1.1)
+
+@media #{$mq-xxlarge}
+  .catchphrases
+    .catchphrase-box
+      width: calc(100%/6)
+
+@media #{$mc-xxlarge}
+  .tarea-1-header
+    .tarea-1-title-img
+      height: 50vw
+
+  .catchphrases
+    .catchphrase-caption
+      h3
+        font-size: $base-spacing*1.5
+
+@media #{$mc-xlarge}
+  .tarea-1-header
+    .tarea-1-title-img
+      height: 80vw
+
+  .catchphrases
+    .catchphrase-box
+      width: calc(100%/3)
+
+
+@media #{$mc-large}
+  .catchphrases
+    .catchphrase-caption
+      h3
+        font-size: $base-spacing*1.2
+
+@media #{$mc-mmedium}
+  .catchphrases
+    .catchphrase-box
+      width: 50%
+
+@media #{$mc-xmedium}
+  .tarea-1-header
+    h1
+      font-size: $base-spacing*1
+
+
+// @media #{$bc-xxlarge}
+
+    // .catchphrase-caption
+    //   h3
+    //     font-size: 1.3em

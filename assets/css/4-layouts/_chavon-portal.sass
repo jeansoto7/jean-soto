@@ -1,0 +1,175 @@
+$portal-lightgrey: #eff3f6
+$portal-mid-grey: #454e57
+$portal-darkgrey: #353d45
+$portal-active-blue: #04b4e0
+
+.chavon-portal
+  width: 100%
+  position: relative
+  background:
+    position: center center
+    size: cover
+  height: 100vh
+  padding: $base-spacing*4
+
+  .container-chavon-portal
+    background-color: $portal-lightgrey
+    height: 100%
+    max-height: 100%
+
+  .container-side-bar, .chavon-portal-logo
+    width: 20%
+
+  .container-content, .chavon-top-bar
+    width: 80%
+
+  .container-top
+    height: 15%
+    display: flex
+
+  .chavon-portal-logo, .chavon-top-bar, .profile-section
+    padding: 0 $base-spacing*2
+
+  .chavon-portal-logo, .chavon-top-bar
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  .chavon-portal-logo
+    height: 100%
+    background: $portal-active-blue
+
+    h3
+      font-weight: 400
+      color: white
+
+    img
+      height: $base-spacing*1.5
+
+  .chavon-top-bar
+    // width: 100%
+    background: white
+
+    h3
+      font-weight: 400
+
+  .progress-bar
+    width: 40%
+    display: flex
+
+    h4
+      margin-right: $base-spacing
+      font-weight: 400
+
+    .progress-bar-group
+      width: 100%
+      display: flex
+      flex-direction: column
+
+      p
+        font-size: $base-spacing*0.7
+        text-align: center
+        margin-top: -$base-spacing*0.7
+
+      .the-bar
+        width: 100%
+        background: #ccc
+        height: $base-spacing/2
+        border-radius: .5em
+
+        .progress-level
+          width: 67%
+          height: 100%
+          border-radius: .5em
+          background: $portal-active-blue
+
+  .view-profile
+    color: $portal-darkgrey
+
+    .view-profile-button
+      height: $base-spacing*4
+
+    .view-profile-button:before
+      font-family: FontAwesome
+      content: "\f2c0"
+      margin-right: $base-spacing*1.5
+
+    .view-profile-button:hover
+      background: $portal-active-blue
+      border: 1px solid $portal-active-blue
+
+  // Container Bottom
+  .container-bottom
+    display: flex
+    height: 85%
+
+  // Side Bar
+  .container-side-bar
+    // display: flex
+    background: $portal-mid-grey
+    position: relative
+
+    a, h2
+      color: white
+
+    h2
+      font-weight: 400
+      font-size: $base-spacing*1.2
+      margin: $base-spacing*0.4 0 $base-spacing*0.2 $base-spacing
+
+    .main-section-list
+      padding: $base-spacing $base-spacing*2
+      display: block
+      font-family: Roboto
+      font-weight: 200
+
+    .main-section-list.active
+      background: $portal-darkgrey
+
+    .main-section-list:hover, .main-section-list.active:hover
+      background: $portal-active-blue
+
+    .main-section-list:before
+      font-family: FontAwesome
+      margin-right: $base-spacing*.5
+
+    .profile-section
+      background: $portal-darkgrey
+      height: 15%
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+
+      .profile-section-anchor
+        display: flex
+        height: 100%
+        align-items: center
+        justify-content: space-between
+
+      .fa, p
+        color: white
+
+      .profile-pic-name
+        display: flex
+        align-items: center
+        height: 100%
+        width: 100%
+
+      img
+        margin-right: $base-spacing
+        height: 40%
+        border-radius: 50%
+
+  // Container Content
+  .container-content
+    padding: $base-spacing $base-spacing*2
+    height: 85%
+
+  .content-title
+    h2
+      text-transform: uppercase
+    hr
+      border: 2px solid $portal-mid-grey
+      margin-bottom: $base-spacing*2
+      width: 5%

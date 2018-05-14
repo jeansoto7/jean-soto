@@ -1,0 +1,32 @@
+.cave-home
+  header.vr-header(style="background-image: url({{site.baseurl}}/assets/img/tareas/tarea-4/contact.jpg)")
+    .vr-overlay
+    nav.nav-vr-bar
+      a.vr-logo(href="{{site.baseurl}}/folders/classes/interactividad/tarea-4/") Virtual fixture
+      ul.nav-vr-ul
+        li: a(href="{{site.baseurl}}/folders/classes/interactividad/tarea-4/") Home
+        li: a(href="{{site.baseurl}}/folders/classes/interactividad/tarea-4/about/") About
+        li: a(href="{{site.baseurl}}/folders/classes/interactividad/tarea-4/contact/") Contact
+    .main-title
+      h1 Contact Us
+.contact-form
+  .form-fill-out
+    #mc_form
+      form(method='POST', action='https://formspree.io/jeancarlos_soto1@hotmail.com')
+        .form-display
+          .row-1
+            .mc-field-group.group-name
+              input(type='text', name='name')
+              label Your Name... 
+            .mc-field-group.group-subject
+              input(type='text', name='subject')
+              label Your Subject... 
+            .mc-field-group.group-email
+              input(type='email', name='_replyto')
+              label Your Email... 
+          .row-2
+            .mc-field-group.group-message
+              input(type='text', name='subject')
+              label Your Message... 
+          .group-submit
+            input.submit-button(type='submit', value='Submit')

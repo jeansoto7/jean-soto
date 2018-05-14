@@ -1,0 +1,114 @@
+.chavon-portal
+
+  .suggestion-form
+    height: 100%
+    // padding: $base-spacing*2
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active
+      -webkit-text-fill-color: $portal-darkgrey
+
+    .form-fill-out, #mc_form, form, .form-display
+      height: 100%
+
+    .form-display
+      width: 100%
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+
+      input[type="text"],
+      input[type="email"]
+        background: none
+        height: $base-spacing*2
+        border: none
+
+      // label, .category-title
+      //   font-weight: 300
+
+      input[type="text"], input[type="email"]
+        width: 100%
+        border-bottom: 3px solid $portal-mid-grey
+
+    .mc-field-group
+      position: relative
+      label
+        +transform(translateY(-50%))
+        +position(absolute, 50% null null 0)
+        pointer-events: none
+        transition: all 0.3s ease-in-out
+
+      input:focus + label,
+      input.has-value + label
+        top: -$base-spacing*0.5
+        font-size: $base-spacing*0.6
+
+    .group-title
+      margin-bottom: $base-spacing
+
+    .group-submit
+      display: flex
+      justify-content: flex-end
+
+      .submit-button
+        padding: $base-spacing*0.5 0
+        font-weight: 400
+        font-size: $base-spacing*0.9
+
+        &:hover
+          color: $portal-darkgrey
+          border: 1px solid #ccc
+
+    .category-field
+      overflow: hidden
+
+    .category-input
+      display: flex
+      justify-content: space-between
+
+    .category-field input
+      position: absolute
+      clip: rect(0, 0, 0, 0)
+      height: 1px
+      width: 1px
+      border: 0
+      overflow: hidden
+
+    .category-field label
+      display: inline-block
+      width: 30%
+      background-color: none
+      color: $portal-darkgrey
+      text-align: center
+      padding: $base-spacing*0.3 0
+      border: 2px solid $portal-mid-grey
+      transition: all 0.1s ease-in-out
+
+    .category-field label:hover
+    	cursor: pointer
+
+    .category-field input:checked + label
+      background-color: $portal-active-blue
+      border: 2px solid $portal-active-blue
+      color: white
+
+    .submit-button
+      padding: $base-spacing*0.5 0
+      width: 30%
+      background: $portal-active-blue
+      color: white
+      font-weight: 400
+
+      &:hover
+        background: #ccc
+        color: $portal-darkgrey
+
+    label.error
+      color: red
+      position: absolute
+      right: $base-spacing
+      bottom: 0
+      top: $base-spacing*2.2
+      text-align: right
+      display: block

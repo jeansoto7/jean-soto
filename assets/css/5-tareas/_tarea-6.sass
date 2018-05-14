@@ -1,0 +1,390 @@
+.background-1
+  background: #d53369
+  background: linear-gradient(to right, #d53369, #cbad6d)
+
+.background-2
+  background: #c21500
+  background: linear-gradient(to right, #c21500, #ffc500)
+
+.background-3
+  background: #f857a6
+  background: linear-gradient(to right, #f857a6, #ff5858)
+
+.background-4
+  background: #a73737
+  background: linear-gradient(to right, #7a2828, #a73737)
+
+.background-5
+  background: #e9d362
+  background: linear-gradient(to right, #e9d362, #333333)
+
+.background-6
+  background: #4b6cb7
+  background: linear-gradient(to right, #4b6cb7, #182848)
+
+.background-7
+  background: #24c6dc
+  background: linear-gradient(to right, #24c6dc, #514a9d)
+
+.background-8
+  background: #414d0b
+  background: linear-gradient(to right, #414d0b, #727a17)
+
+.background-9
+  background: #e43a15
+  background: linear-gradient(to right, #e43a15, #e65245)
+
+.background-10
+  background: #c04848
+  background: linear-gradient(to right, #c04848, #480048)
+
+.background-11
+  background: #283048
+  background: linear-gradient(to right, #283048, #859398)
+
+.background-12
+  background: #232526
+  background: linear-gradient(to right, #232526, #414345)
+
+.background-13
+  background: #5c258d
+  background: linear-gradient(to right, #5c258d, #4389a2)
+
+.background-14
+  background: #134e5e
+  background: linear-gradient(to right, #134e5e, #71b280)
+
+.background-15
+  background: #4776e6
+  background: linear-gradient(to right, #4776e6, #8e54e9)
+
+.tarea-6-jokes
+  margin-bottom: 300px
+  position: relative
+  z-index: 2
+  height: 100%
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  // justify-content: space-between
+  align-items: center
+
+  .jokes-header
+    width: 100%
+    position: relative
+    display: flex
+    // justify-content: center
+    // align-items: center
+
+    a
+      position: relative
+      color: $jeankee-lightgrey
+
+  .nav-jokes-bar, .nav-jokes-ul
+    display: flex
+
+  .nav-jokes-bar
+    justify-content: space-between
+    align-items: center
+    // position: absolute
+    // top: 0
+    width: 100%
+    z-index: 10
+    padding: 0 $base-spacing/2
+
+    .jokes-logo
+      font-size: $base-spacing*1.5
+      text-transform: uppercase
+      font-weight: 600
+      margin-left: $base-spacing*.5
+
+  .nav-jokes-ul li
+    margin-right: $base-spacing*1.5
+
+  .nav-jokes-ul li a
+    border-bottom: 4px solid transparent
+    display: inline-block
+    font-weight: 400
+
+  .nav-jokes-ul li a.active-nav:before
+    background: $jeankee-darkgrey
+    height: 4px
+    left: 0
+    right: 0
+
+  .nav-jokes-ul li a:before, .jokes-logo:before
+    content: ""
+    position: absolute
+    z-index: -1
+    left: 50%
+    right: 50%
+    bottom: 0
+    background: $jeankee-lightgrey
+    height: 4px
+    transition: all 0.3s ease-in-out
+
+  .nav-jokes-ul li a:hover:before, .nav-jokes-ul li a:focus:before, .nav-jokes-ul li a:active:before,
+  .jokes-logo:hover:before, .jokes-logo:focus:before, .jokes-logo:active:before
+    left: 0
+    right: 0
+
+  .all-jokes
+    width: 90%
+    margin: auto
+
+    h2
+      text-align: center
+      // font-size: $base-spacing*1.5
+      font-weight: 400
+      color: $jeankee-lightgrey
+      // text-transform: uppercase
+      // margin-bottom: $base-spacing*1
+
+  .all-jokes-ul
+    display: flex
+    flex-wrap: wrap
+    width: 100%
+
+    li
+      text-align: center
+      width: calc(100%/3)
+      padding: $base-spacing
+
+    li a
+      // width: calc(100%/3)
+      border: 1px solid $jeankee-lightgrey
+      display: flex
+      justify-content: center
+      align-items: center
+      height: 30vh
+      margin: auto
+      color: $jeankee-lightgrey
+      font-size: $base-spacing*1.5
+      font-weight: 400
+      background: rgba(51, 51, 51, 0.2)
+
+      &:hover,
+      &:active,
+      &:focus
+        background: rgba(232, 232, 232, 0.3)
+
+
+  .joke
+    text-align: center
+    width: 100%
+    margin: auto
+
+    p
+      color: $jeankee-lightgrey
+      font-size: $base-spacing*2.5
+      padding: 0 $base-spacing/2
+      font-weight: 600
+      text-transform: uppercase
+      line-height: 1.5
+      margin-bottom: $base-spacing
+
+  .joke-buttons
+    display: flex
+    justify-content: center
+
+    button
+      color: $jeankee-lightgrey
+      background-color: rgba(51, 51, 51, 0.2)
+      border: 1px solid $jeankee-lightgrey
+      font-size: $base-spacing*0.7
+      width: 20%
+      height: $base-spacing*4
+
+      &:hover,
+      &:active,
+      &:focus
+        background: rgba(232, 232, 232, 0.3)
+        // color: $jeankee-lightgrey
+
+  .new-joke
+    margin-right: $base-spacing
+
+  .tweet:before
+    font-family: FontAwesome
+    content: "\f099"
+    margin-right: $base-spacing/2
+
+
+// Footer
+.tarea-6-footer
+  z-index: 0
+  position: fixed
+  bottom: 0
+  height: 300px
+  background: $jeankee-darkgrey
+  width: 100%
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  color: $jeankee-lightgrey
+
+  h2, .fa
+    color: $jeankee-lightgrey
+
+  .form-display, .social-media
+    display: flex
+
+  .copyright
+    p, a
+      color: $jeankee-lightgrey
+
+  .form-title
+    margin-bottom: $base-spacing*1.6
+    h2
+      font-size: $base-spacing*1.2
+      font-weight: 500
+      text-align: center
+      margin: 0 $base-spacing/2
+
+  .subscribe-form
+    width: 70%
+
+  .form-display
+    margin: 0 $base-spacing/2
+    align-items: flex-end
+
+    input[type="text"],
+    input[type="email"]
+      background: none
+      height: $base-spacing*2
+      border: none
+      border-bottom: 1px solid $jeankee-lightgrey
+
+    input[type="text"], input[type="email"]
+      width: 100%
+
+    input[type="submit"]
+      background-color: rgba(51, 51, 51, 0.2)
+      &:hover
+        background: rgba(232, 232, 232, 0.3)
+
+  .mc-field-group
+    margin-right: $base-spacing/2
+    position: relative
+    label
+      +transform(translateY(-50%))
+      +position(absolute, 50% null null 0)
+      font:
+        style: italic
+      pointer-events: none
+      transition: all 0.3s ease-in-out
+
+    input:focus + label,
+    input.has-value + label
+      top: -$base-spacing*0.5
+      font-size: $base-spacing*0.6
+
+  .group-text
+    width: 30%
+
+  .group-email
+    width: 55%
+
+  .subscribe-button
+    width: 15%
+    border: 1px solid $jeankee-lightgrey
+
+  .social-media
+    align-items: center
+    margin: $base-spacing*1.5 0 $base-spacing*1
+
+    a
+      margin: 0 $base-spacing*0.9
+      transition: all 0.3s ease-in-out
+
+      &:hover, &:focus, &:active
+        -webkit-text-stroke: 0.5px $jeankee-lightgrey
+        cursor: pointer
+        color: rgba(232, 232, 232, 0.3)
+
+        &:first-child
+          -webkit-text-stroke: 0.3px $jeankee-lightgrey
+
+@media #{$mq-xlarge}
+  .footer
+    height: 350px
+
+@media #{$mq-xxlarge}
+  .footer
+    height: 400px
+
+@media #{$mq-xxxlarge}
+  .footer
+    height: 550px
+
+@media (max-width: 48.125em), #{$tq-medium}, #{$tq-large}
+  .footer
+    .subscribe-button
+      width: 20%
+
+    .subscribe-form
+      width: 90%
+
+@media #{$mc-large}
+  .footer
+    height: 400px
+    .subscribe-button
+      width: 30%
+    .group-text
+      width: 50%
+
+    .copyright
+      text-align: center
+
+@media #{$mc-medium}
+
+  .footer
+    height: 500px
+    text-align: center
+
+    .subscribe-form
+      width: 100%
+
+    .form-title
+      margin-bottom: 25px
+
+    .form-display
+      margin: 0 $base-spacing
+      flex-direction: column
+
+      input[type="text"],
+      input[type="email"]
+        height: $base-spacing*2
+
+      input[type="text"]
+        margin-bottom: $base-spacing
+
+    .group-text, .group-email
+      width: 100%
+
+    .subscribe-button
+      margin: auto
+      width: 50%
+      margin-top: $base-spacing*3
+
+    .social-media
+      margin-top: $base-spacing*2
+
+    .mc-field-group
+      margin: 0
+
+      &:first-child
+        margin-bottom: $base-spacing
+
+        label
+          padding-bottom: 15px
+
+      label
+        width: 100%
+        text-align: center
+
+      input:focus + label,
+      input.has-value + label
+        top: -5px
+        padding: 0

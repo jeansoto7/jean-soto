@@ -1,0 +1,62 @@
+mixin folder-listing(href, name, className, className2)
+  .folder-listing
+    a(href=href): svg.folder-svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 190.7 153.3', style='enable-background:new 0 0 190.7 153.3;', xml:space='preserve')
+      path.st0(class=className)(d='M1,16.7v120.1c0,8.6,6.4,15.5,14.3,15.5h160.1c7.9,0,14.3-6.9,14.3-15.5V34.4c0-8.6-6.4-15.5-14.3-15.5H84.1\
+      L67.3,1L15.1,1.3C7.3,1.4,1,8.2,1,16.7z')
+    .text-icon
+      p.link-name-folder= name
+      .fa(class=className2)
+
+mixin folder-listing-small(href, name, className, className2, className3, name2)
+  .folder-listing(class=className3)
+    a.folder-anchors(href=href)(class=className)
+      .fa(class=className2)
+      p.name-folder= name
+    p.updated-date= name2
+
+.folders
+  .folder-nav
+    a(href="{{site.baseurl}}/"): img.svg-logo(src="{{site.baseurl}}/assets/img/logo.svg", title="Jean Soto", alt="Jean Soto Logo")
+    .folder-list
+      h3.folder-main-ul Main Folders
+        li: a.main-folder.fa.fa-file-code-o(href="{{site.baseurl}}/folders/classes/") Classes
+        li: a.main-folder.fa.fa-file-photo-o(href="{{site.baseurl}}/folders/photos/") Photos
+        li: a.main-folder.fa.fa-file-video-o(href="{{site.baseurl}}/folders/videos/") Videos
+        li: a.main-folder.fa.fa-file-sound-o(href="{{site.baseurl}}/folders/music/") Music
+        li: a.main-folder.fa.fa-file-pdf-o(href="{{site.baseurl}}/folders/apps/") Apps
+        li: a.main-folder.fa.fa-file-archive-o(href="{{site.baseurl}}/folders/files/") Files
+      
+      h3.folder-main-ul Most Recent
+        li: a.main-folder.fa.fa-file-code-o(href="{{site.baseurl}}/folders/classes/interactividad/tarea-1/") Texto sobre imagen
+        li: a.main-folder.fa.fa-file-code-o(href="{{site.baseurl}}/folders/classes/interactividad/tarea-2/") Botones como Links
+        li: a.main-folder.fa.fa-file-code-o(href="{{site.baseurl}}/folders/classes/interactividad/tarea-3/") Reproducir sonido
+        li: a.main-folder.fa.fa-file-code-o(href="{{site.baseurl}}/folders/classes/interactividad/tarea-4/") Pop up
+        li: a.main-folder.fa.fa-file-code-o(href="{{site.baseurl}}/folders/classes/interactividad/tarea-5/") Imagen
+  
+  .folder-directory
+    h2.fa.fa-hdd-o.directory-title N/A
+    hr
+    .folder-buttons
+      .just-buttons
+        .buttons-only
+          a(href="{{site.baseurl}}/folders/"): button(title='Backward').sweep-to-left.back-button.fa
+          a(href="{{site.baseurl}}/folders/"): button(title='Home').sweep-to-top.home-button.fa
+          a(href="{{site.baseurl}}/folders/classes/interactividad"): button(title='Most Frequent Forward').sweep-to-right.forward-button.fa
+        .folder-display
+          button(title='List').rectangle-animation.rectangle-in.list-icons-button.fa
+          button(title='Icons').rectangle-animation.rectangle-out.big-icons-button.fa.activated
+      .search-bar
+        form(action='/action_page.php')
+          .fa.fa-search
+          input(type='search', name='user', placeholder='Search')
+    
+    .folder-icons.big-folder-icons
+      hr
+      +folder-listing('', 'Not Available', 'not-available', 'fa-file-o')
+    
+    .folder-icons.small-folder-icons.hide
+      .title-info
+        p.organizer-title Title
+        p.organizer-updated Updated
+      +folder-listing-small('', 'Not Available', 'not-available', 'fa-file-o', 'class1', 'Today')
+      

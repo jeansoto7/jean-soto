@@ -1,0 +1,10 @@
+mixin nav-content()
+  ul
+    li: a.fa.fa-folder(href="{{site.baseurl}}/folders") Folders
+
+header
+  .header-position
+    h1 Jeankee
+
+    nav.site-nav
+      +nav-content()

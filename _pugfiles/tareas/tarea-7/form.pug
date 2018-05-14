@@ -1,0 +1,138 @@
+form.tarea-7-form
+  //- .container
+  //-   h1 Urpinion
+  //-   h2 Create a new account
+  //-   form.form(action='#')
+  //-     fieldset.form-fieldset.ui-input.__first
+  //-       input#username(type='text', tabindex='0')
+  //-       label(for='username')
+  //-         span(data-text='Username') Username
+  //-     fieldset.form-fieldset.ui-input.__second
+  //-       input#email(type='email', tabindex='0')
+  //-       label(for='email')
+  //-         span(data-text='E-mail Address') E-mail Address
+  //-     fieldset.form-fieldset.ui-input.__third
+  //-       input#new-password(type='password')
+  //-       label(for='new-password')
+  //-         span(data-text='New Password') New Password
+  //-     fieldset.form-fieldset.ui-input.__fourth
+  //-       input#repeat-new-password(type='password')
+  //-       label(for='repeat-new-password')
+  //-         span(data-text='Repeat New Password') Repeat New Password
+  //-     .form-footer
+  //-       button.btn Create Account
+  
+  form(method='POST', action='https://formspree.io/jeancarlos_soto1@hotmail.com')
+  .form-display
+    .mc-field-group.group-name
+      label Name
+      input(name='Name', type='text')
+    .mc-field-group.group-email
+      label Email
+      input(name='Email', type='email')
+    .mc-field-group.category
+      label Category
+      select(name='Category', size='3')
+        option(value='Comments') Comments
+        option(value='Questions') Questions
+        option(value='Requests') Requests
+    .mc-field-group.group-subject
+      label Suggestion Title
+      input(name='Suggestion Title', type='text')
+    .mc-field-group.group-message
+      label Suggestion Description
+      input(name='Suggestion Description', type='text')
+    .group-submit
+      input.submit-button(type='submit', value='Submit')
+
+  
+  .container
+    h1 Urpinion
+    h2 Create a new account
+    form(method='POST', action='https://formspree.io/jeancarlos_soto1@hotmail.com')
+      .form-display
+        .mc-field-group.group-name.form-first
+          input#name(name='name', type='text', tabindex='0')
+          label(for='name') Name
+            span(data-text='Name') Name
+        .mc-field-group.group-email.form-second
+          input#email(name='email', type='email', tabindex='0')
+          label(for='email') Name
+            span(data-text='E-mail Address') E-mail Address
+        .mc-field-group.group-category.form-third
+          label Choose a browser from this list:
+          input(list='category', name='category', size='3')
+          datalist#browsers
+            option(value='comments') Comments
+            option(value='questions') Questions
+            option(value='requests') Requests
+          //- select(name='category', size='3')
+          //-   option(value='comments') Comments
+          //-   option(value='questions') Questions
+          //-   option(value='requests') Requests
+          //- input#new-password(type='text')
+          //- label(for='new-password')
+          //-   span(data-text='New Password') New Password
+        .mc-field-group.group-suggestion-title.form-fourth
+          input#name(name='category', type='text', tabindex='0')
+          label(for='name') Name
+            span(data-text='Suggestion Title*') Suggestion Subject*
+        .mc-field-group.group-suggestion-description.form-fourth
+          input#name(name='category', type='text', tabindex='0')
+          label(for='name') Name
+            span(data-text='Suggestion Description') Suggestion Description*
+        //- fieldset.form-fieldset.ui-input.__fifth
+        //-   input#repeat-new-password(type='password')
+        //-   label(for='repeat-new-password')
+        //-     span(data-text='Repeat New Password') Repeat New Password
+        .group-submit
+          input.submit-button(type='submit', value='Submit')
+          //- button.btn Submit
+  
+  //- #mc_form
+  //-   form(method='POST', action='https://formspree.io/jeancarlos_soto1@hotmail.com')
+  //-     .form-display
+  //-       .row-1
+  //-         .mc-field-group.group-name
+  //-           input(type='text', name='name')
+  //-           label Your Name... 
+  //-         .mc-field-group.group-subject
+  //-           input(type='text', name='subject')
+  //-           label Your Subject... 
+  //-         .mc-field-group.group-email
+  //-           input(type='email', name='_replyto')
+  //-           label Your Email... 
+  //-       .row-2
+  //-         .mc-field-group.group-message
+  //-           input(type='text', name='subject')
+  //-           label Your Message... 
+  //-       .group-submit
+  //-         input.submit-button(type='submit', value='Send')
+  
+  .row-form-1
+    .full-name.input-parts
+      label De parte de
+      input(name='name', type='text', placeholder='Nombre completo')
+    .passport.input-parts
+      label Cédula o No. pasaporte
+      input#id_number(name='id', type='text')
+    .email.input-parts
+      label E-mail
+      input(name='email', type='text', placeholder='ejemplo@ejemplo.com')
+  .row-form-2
+    .phone-number.input-parts
+      label Teléfono
+      input#phone_number(name='phone', type='text')
+    .gift-name.input-parts
+      label Le quiero enviar un regalo a
+      input(name='name2', type='text', placeholder='Nombre completo')
+    .full-address.input-parts
+      label Dirección del destinatario
+      input(name='address', type='text', placeholder='Dirección completa')
+  .row-form-3
+    .message.input-parts
+      label Mensaje
+      textarea(name='message', id='', cols='30', rows='10')
+  button.send(form='myform', type='submit') Enviar
+  
+  

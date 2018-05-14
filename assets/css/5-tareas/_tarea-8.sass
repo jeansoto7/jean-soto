@@ -1,0 +1,147 @@
+.chavon-portal
+
+  // Status Box
+  .status-box, .description-textarea
+    background: transparent
+    border: 3px solid $portal-mid-grey
+    resize: none
+    outline: none
+    width: 100%
+    height: 20%
+    padding: $base-spacing*.5
+
+  .button-group
+    display: flex
+    justify-content: space-between
+    margin-bottom: $base-spacing
+
+    .btn.btn-primary
+      padding: $base-spacing*0.5 0
+      width: 30%
+      text-align: center
+      background: $portal-active-blue
+      color: white
+      font-weight: 400
+      // font-size: $base-spacing*0.9
+      text-transform: uppercase
+
+      &:hover
+        background: #ccc
+        color: $portal-darkgrey
+
+  // .counter
+  //   margin-top: 0
+  //   margin-bottom: 0
+  //   margin-right: 10px
+
+  .posts
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    height: 65%
+    overflow: hidden
+    overflow-y: auto
+
+  .posts li
+    background-color: white
+    // border: 2px solid $portal-mid-grey
+    box-shadow: 2px 2px 5px -1px rgba(51, 51, 51, 0.2)
+    padding: $base-spacing
+    // width: calc(100%/3)
+    width: 30%
+    margin-bottom: $base-spacing
+    word-wrap: break-word
+    height: $base-spacing*7.45
+    min-height: $base-spacing*7.45
+
+
+  // Teachers
+  .chavon-teachers
+    height: 100%
+    display: flex
+    flex-wrap: wrap
+
+    .teacher-img-anchor
+      width: calc(100%/3)
+      // height: 50%
+
+    .teacher-pic
+      display: flex
+      // height: 100%
+
+      img
+        border-radius: 50%
+        margin-right: $base-spacing*2.5
+        height: 30%
+        width: 30%
+
+    .teacher-text
+      display: flex
+      flex-direction: column
+      justify-content: center
+
+      h4
+        font-weight: 400
+        color: $portal-darkgrey
+        font-size: $base-spacing*1.2
+
+      p
+        font-size: $base-spacing*0.8
+        color: #888888
+
+
+  // Announcements
+  .announcements-content
+    display: flex
+    flex-direction: column
+    height: 100%
+
+    .row-1, .row-2
+      width: 100%
+      height: 50%
+      display: flex
+
+    .row-1
+      margin-bottom: $base-spacing
+
+    .announcement
+      width: 25%
+      // height: 50%
+      display: flex
+      flex-direction: column
+      align-items: center
+      // justify-content: space-between
+      text-align: center
+      position: relative
+      background: white
+      padding: $base-spacing
+      // border: 2px solid $portal-mid-grey
+      box-shadow: 2px 2px 5px -1px rgba(51, 51, 51, 0.2)
+
+      p
+        font-size: $base-spacing*0.9
+
+      img
+        border-radius: 50%
+        width: 35%
+        margin-bottom: $base-spacing*0.6
+
+    .announcement-read-more
+      position: absolute
+      bottom: 0
+      width: 100%
+      padding: $base-spacing*0.4
+      background: $portal-active-blue
+
+      p
+        color: white
+
+      &:hover
+        background: #ccc
+        color: $portal-darkgrey
+
+    .left-right
+      margin: 0 $base-spacing
+
+    .right
+      margin-right: $base-spacing

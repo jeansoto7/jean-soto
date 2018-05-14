@@ -1,0 +1,275 @@
+.cave-home
+  .vr-header
+    width: 100%
+    position: relative
+    background:
+      position: center center
+      size: cover
+    height: 60vh
+    display: flex
+    justify-content: center
+    align-items: center
+
+    a, h1, p
+      position: relative
+      color: $jeankee-lightgrey
+      z-index: 1
+
+    h1
+      font-weight: 400
+
+  .nav-vr-bar, .nav-vr-ul
+    display: flex
+
+  .nav-vr-bar
+    justify-content: space-between
+    align-items: center
+    position: absolute
+    top: 0
+    width: 100%
+    z-index: 10
+    padding: 0 $base-spacing*2
+
+    .vr-logo
+      font-size: $base-spacing*1.5
+      text-transform: uppercase
+      font-weight: 600
+      margin-left: $base-spacing*.5
+
+  .nav-vr-ul
+    li
+      margin-right: $base-spacing*1.5
+
+    li a
+      display: inline-block
+      font-weight: 400
+
+    li a:before
+      content: ""
+      position: absolute
+      z-index: -1
+      left: 50%
+      right: 50%
+      bottom: 0
+      background: $jeankee-lightgrey
+      height: 4px
+      transition: all 0.3s ease-in-out
+
+    li a:hover:before, li a:focus:before, li a:active:before
+      left: 0
+      right: 0
+
+  .vr-overlay
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    pointer-events: none
+    z-index: 0
+    background-color: rgba(0, 0, 0, 0.7)
+
+  .main-title
+    text-align: center
+
+  .buttons-vr-box, .buttons-vr-box2
+    h2
+      color: $jeankee-lightgrey
+      text-align: center
+      font-size: $base-spacing*2
+      font-weight: 600
+
+  .buttons-vr-box
+    padding: $base-spacing*2.5 $base-spacing*5
+    background-color: #0f172e
+
+    button
+      background-color: #0f172e
+
+  .buttons-vr-box2
+    padding: $base-spacing*2.5 $base-spacing*5
+    background-color: #0d1017
+
+    button
+      background-color: #0d1017
+
+  .buttons-vr
+    display: flex
+    overflow: hidden
+
+  .buttons-vr-position
+    display: flex
+    flex-direction: column
+    min-height: 80vh
+
+    button
+      height: 100%
+      color: $jeankee-lightgrey
+      border: 0.5px solid $jeankee-lightgrey
+      transition: all 0.3s ease-in-out
+
+    button:hover, button:focus, button:active, button.active
+      background-color: #20a7d1
+      border: 0.5px solid #20a7d1
+
+  .buttons-vr-center
+    width: 50%
+
+  .buttons-vr-left, .buttons-vr-right
+    width: 25%
+
+  .cockpit-background-img
+    background:
+      position: center center
+      size: cover
+    height: 100%
+    transition: all 0.5s ease-in-out
+    transform: scale(3)
+
+  .left-top-active
+    transform: scale(3) translate(33%, 33%)
+  .left-center-active
+    transform: scale(3) translate(33%, 0)
+  .left-bottom-active
+    transform: scale(3) translate(33%, -33%)
+  .center-top-active
+    transform: scale(3) translate(0, 33%)
+  .center-bottom-active
+    transform: scale(3) translate(0, -33%)
+  .right-top-active
+    transform: scale(3) translate(-33%, 33%)
+  .right-center-active
+    transform: scale(3) translate(-33%, 0)
+  .right-bottom-active
+    transform: scale(3) translate(-33%, -33%)
+  .center-center-active
+    transform: scale(3) translate(0, 0)
+
+.footer-tarea-4
+  background: #1c1c1c
+  text-align: center
+  padding: $base-spacing
+
+  p, a
+    display: inline-block
+    color: $jeankee-lightgrey
+
+  a:hover
+    border-bottom: 2px solid $jeankee-lightgrey
+
+// Email Form
+.contact-form
+  padding: $base-spacing*2
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active
+    -webkit-text-fill-color: $jeankee-darkgrey
+
+  .form-display
+    input[type="text"],
+    input[type="email"]
+      background: none
+      height: $base-spacing*2
+      border: none
+
+    input[type="text"], input[type="email"]
+      width: 100%
+
+  .mc-field-group
+    position: relative
+
+    label
+      +transform(translateY(-50%))
+      +position(absolute, 50% null null 0)
+      font:
+        style: italic
+      pointer-events: none
+      transition: all 0.3s ease-in-out
+
+    input:focus + label,
+    input.has-value + label
+      top: -$base-spacing*0.5
+      font-size: $base-spacing*0.6
+
+  .form-display
+    width: 95%
+    margin: auto
+    margin: $base-spacing*2 auto 0
+    padding: 0 $base-spacing
+
+    input[type="text"],
+    input[type="email"]
+      border-bottom: 1px solid $jeankee-darkgrey
+
+  .row-1
+    display: flex
+    margin-bottom: $base-spacing*2.5
+
+  .row-2
+    width: 100%
+
+  .group-name, .group-subject
+    margin-right: $base-spacing
+
+  .group-name
+    width: 20%
+
+  .group-subject
+    width: 40%
+
+  .group-email
+    width: 40%
+
+  .group-message
+    width: 100%
+
+  .group-submit
+    display: flex
+    justify-content: flex-end
+
+  .submit-button
+    margin-top: $base-spacing*2.5
+
+.vr-about
+  text-align: center
+  padding: $base-spacing*2.5 $base-spacing*5
+
+  h2
+    font-size: $base-spacing*2
+
+  .thehr
+    margin: 0 auto
+    width: 10%
+    height: 1px
+    border: 0
+    border-top: 1px solid $jeankee-darkgrey
+    margin-bottom: $base-spacing*0.5
+
+@media #{$mc-large}
+  .contact-form
+    padding: $base-spacing*2 0
+
+    .form-display
+      padding: 0
+
+    .row-1
+      flex-wrap: wrap
+      justify-content: space-between
+
+    .group-name, .group-subject
+      margin: 0
+      width: 49%
+
+    .group-name, .group-subject, .group-email
+      margin-bottom: $base-spacing*1.5
+
+    .group-email
+      width: 100%
+
+@media #{$mc-medium}
+  .contact-form
+    label, .group-name, .group-subject
+      width: 100%
+
+    label
+      text-align: center
