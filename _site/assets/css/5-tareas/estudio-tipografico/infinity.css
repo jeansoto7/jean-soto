@@ -471,7 +471,7 @@ td:last-child {
 }
 
 .pace .pace-progress {
-  background: #f9a828;
+  background: #ed1c24;
   position: fixed;
   z-index: 900;
   top: 0;
@@ -510,7 +510,7 @@ td:last-child {
   margin-left: -30px;
   margin-top: -30px;
   padding: 0;
-  background-color: #f9a828;
+  background-color: #ed1c24;
   border-radius: 100%;
   -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
   animation: sk-scaleout 1.0s infinite ease-in-out;
@@ -701,7 +701,7 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   border: none;
-  -webkit-text-fill-color: #fabc5a;
+  -webkit-text-fill-color: #ed1c24;
   transition: background-color 5000s ease-in-out 0s;
 }
 
@@ -811,8 +811,8 @@ button.stroke.large, .button.stroke.large {
 }
 
 button.stroke:hover, .button.stroke:hover {
-  border: 3px solid #f9a828;
-  color: #f9a828;
+  border: 3px solid #ed1c24;
+  color: #ed1c24;
 }
 
 button::-moz-focus-inner,
@@ -858,7 +858,8 @@ input::-moz-focus-inner {
 
 .ss-info {
   background-color: #d7ecfb;
-  color: #4a95cc;
+  color: #ed1c24;
+  border: 2px solid red;
 }
 
 .ss-notice {
@@ -1261,10 +1262,11 @@ header .header-logo a {
   outline: 0;
   border: none;
   width: 57px;
-  height: 27px;
-  background: url("../images/logo.png") no-repeat center;
-  background-size: 57px 27px;
-  font: 0/0 a;
+  height: 88px;
+  /* height: auto; */
+  background: url("/assets/img/tareas/estudio-tipografico/logo.png") no-repeat center;
+  background-size: cover;
+  /* font: 0/0 a; */
   text-shadow: none;
   color: transparent;
   -moz-transition: all 0.5s ease-in-out;
@@ -1509,7 +1511,7 @@ header .header-logo a {
   width: 100%;
   height: 100%;
   background-color: #151515;
-  background-image: url(../images/hero-bg.jpg);
+  background-image: url(/assets/img/tareas/estudio-tipografico/hero-bg.jpg);
   background-repeat: no-repeat;
   background-position: center 30%;
   -webkit-background-size: cover;
@@ -1886,7 +1888,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
  * ------------------------------------------------------------------- */
 #services {
   background-color: #19191b;
-  background-image: url(../images/services-bg.jpg);
+  background-image: url(/assets/img/tareas/estudio-tipografico/services-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   -webkit-background-size: cover;
@@ -1947,7 +1949,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 }
 #services .services-list .icon i {
   font-size: 5.4rem;
-  color: #f9a828;
+  color: #ed1c24;
 }
 #services .services-list .h05 {
   font-size: 1.7rem;
@@ -2194,7 +2196,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   padding: 12px 20% 15px;
 }
 .lg-sub-html a, .lg-sub-html a:visited {
-  color: #f9a828;
+  color: #ed1c24;
 }
 .lg-sub-html a:hover, .lg-sub-html a:focus {
   color: #FFFFFF;
@@ -2226,7 +2228,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 }
 
 .lg-outer .lg-thumb-item.active, .lg-outer .lg-thumb-item:hover {
-  border-color: #f9a828;
+  border-color: #ed1c24;
 }
 
 .lg-progress-bar .lg-progress {
@@ -2508,7 +2510,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
  * ------------------------------------------------------------------- */
 #contact {
   background-color: #111111;
-  background-image: url(../images/contact-bg.jpg);
+  background-image: url(/assets/img/tareas/estudio-tipografico/contact-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   -webkit-background-size: cover;
@@ -2584,7 +2586,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   padding: .6rem 2rem .6rem 2rem;
   margin: 0;
   color: #000000;
-  background: #f9a828;
+  background: #ed1c24;
   border-radius: 3px;
 }
 #contact form .form-field label::after {
@@ -2594,7 +2596,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   margin-top: -6px;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-bottom: 5px solid #f9a828;
+  border-bottom: 5px solid #ed1c24;
   content: "";
 }
 #contact form ::-webkit-input-placeholder {
@@ -2647,7 +2649,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   line-height: 6rem;
   padding: 0 3rem;
   width: 100%;
-  background: #f9a828;
+  background: #ed1c24;
   color: #000000;
   margin-top: .6rem;
 }
@@ -2668,7 +2670,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 }
 
 #message-success {
-  color: #f9a828;
+  color: #ed1c24;
 }
 
 #message-warning i,
@@ -2810,7 +2812,7 @@ footer a, footer a:visited {
   color: #FFFFFF;
 }
 footer a:hover, footer a:focus {
-  color: #f9a828;
+  color: #ed1c24;
 }
 footer .row {
   max-width: 1024px;
@@ -2867,7 +2869,7 @@ footer h4.h05::after {
   background-color: rgba(0, 0, 0, 0.9);
 }
 .footer-main #mc-form button {
-  background-color: #f9a828;
+  background-color: #ed1c24;
   color: #000000;
   width: 6rem;
   height: 6rem;
@@ -2889,7 +2891,7 @@ footer h4.h05::after {
   left: .2rem;
 }
 .footer-main #mc-form label {
-  color: #f9a828;
+  color: #ed1c24;
   font-family: "montserrat-regular", sans-serif;
 }
 
