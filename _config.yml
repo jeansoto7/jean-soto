@@ -1,6 +1,6 @@
 markdown: kramdown
-# baseurl: http://www.jeansoto.com
-baseurl: ''
+baseurl: http://www.jeansoto.com
+# baseurl: ''
 exclude: ["node_modules", "vendor", "gulpfile.js", "package.json", "README.md"]
 permalink: pretty
 # highlighter: rouge
